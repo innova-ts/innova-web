@@ -7,6 +7,7 @@ type LocalesFormat = {
 
 const availableTranslations = [
     'common.json',
+    'navigation.json',
 ]
 
 const getFiles = (locs: Array<LocalesFormat>) => {

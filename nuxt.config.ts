@@ -5,10 +5,20 @@ import { localeI18nOptions } from './i18n/options'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  css: ['@/assets/css/main.css'],
+  srcDir: 'app/',
   vite: {
     plugins: [
       tailwindcss(),
     ],
+  },
+  app: {
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      titleTemplate: `%s - ${import.meta.env.APP_NAME}`,
+      title: 'Welcome',
+    }
   },
 
   // Disable autoimports
@@ -33,7 +43,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Public environment variables
     public: {
-      name: import.meta.env.APP_NAME,
+      appName: import.meta.env.APP_NAME,
     }
   },
 

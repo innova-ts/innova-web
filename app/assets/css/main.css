@@ -28,3 +28,22 @@
 .container-site {
     @apply max-w-7xl px-4 mx-auto w-full;
 }
+
+.page-enter-active, .page-leave-active {
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-enter-from { transform: translateY(-6px); }
+
+.page-leave-to { transform: translateY(6px); }
+
+.layout-enter-active, .layout-leave-active {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.layout-enter-from, .layout-leave-to, .page-leave-to, .page-enter-from { opacity: 0; }
+
+::selection {
+    background-color: var(--color-main-400);
+    color: var(--color-text-selected);
+}
