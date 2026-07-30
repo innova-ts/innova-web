@@ -2,7 +2,7 @@
     "navigation": {
         "home": "Home",
         "about": "About",
-        "our-team": "Our team",
+        "ourTeam": "Our team",
         "contact": "Contact"
     }
 }

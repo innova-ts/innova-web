@@ -1,5 +1,5 @@
 <template>
     <div>
-        About page
+        Our team
     </div>
 </template>
