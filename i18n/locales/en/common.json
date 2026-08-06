@@ -1,5 +1,14 @@
 {
     "common": {
-        
+        "brand": {
+            "slogan": "Build for the future of code."
+        },
+        "footer": {
+            "copyRightMessage": "© {year} {appName}.",
+            "titles": {
+                "services": "Services",
+                "legal": "Legal"
+            }
+        }
     }
 }
