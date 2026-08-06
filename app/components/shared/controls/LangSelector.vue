@@ -4,10 +4,6 @@ import { useI18n } from 'vue-i18n';
 
 const { locale, locales: locs, setLocale } = useI18n();
 
-
-
-console.log({locale})
-
 const readLocales = computed(() => {
     return (locs.value as Array<any>).map((item) => ({
         value: item.code,

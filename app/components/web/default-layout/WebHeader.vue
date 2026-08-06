@@ -19,7 +19,29 @@ const toggleMenu = () => {
     <header class="fixed top-0 left-0 z-50 h-web-ss w-full backdrop-blur-md bg-white/80 dark:bg-bod/80 border-b border-gray-200 dark:border-zinc-800 transition-colors duration-300">
         <nav class="h-full container-site flex items-center justify-between">
             <div class="flex h-full">
-                <div class="flex-1 flex justify-start items-center md:hidden">
+                <ul :class="[
+                    'inset-y-0 left-0 z-40 flex flex-col md:flex-row h-screen md:h-full w-4/5 max-w-sm md:w-auto bg-white dark:bg-zinc-900 md:bg-transparent dark:md:bg-transparent p-0 md:p-0 pt-10 md:pt-0 gap-4 md:gap-2 border-r md:border-r-0 border-gray-200 dark:border-zinc-800 shadow-xl md:shadow-none transition-transform duration-300 md:transition-none md:translate-x-0 fixed md:relative', 
+                    isOpen ? 'translate-x-0' : '-translate-x-full'
+                ]">
+                    <li class="h-12 md:h-full">
+                        <!-- Logo -->
+                        <span class="flex h-12 h-full justify-center items-center dark:text-white">
+                            <strong>
+                                {{ config.public.appName }}
+                            </strong>
+                        </span>
+                    </li>
+                    <li v-for="route, index in routes" :key="index" class="h-12 md:h-full group/item-text">
+                        <NuxtLinkLocale 
+                            :to="route.path"
+                            @click="isOpen = false"
+                            class="flex w-auto h-full items-center md:justify-center px-4 md:px-4 border-l-4 md:border-l-0 md:border-b border-transparent dark:hover:bg-main-950/20 transition-all text-base md:text-sm font-medium text-zinc-600 dark:text-zinc-400 whitespace-nowrap group"
+                        >
+                            <span class="border-transparent border-b-2 transition-all group-hover/item-text:border-main-100/50 dark:group-hover/item-text:border-main-300">{{ $t(route.label) }}</span>
+                        </NuxtLinkLocale>
+                    </li>
+                 </ul>
+                 <div class="flex-1 flex justify-start items-center md:hidden">
                     <button @click="toggleMenu" type="button"
                         class="flex flex-col justify-center items-center w-8 h-8 rounded-lg p-1 z-50 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
                         aria-label="Toggle menu">
@@ -31,25 +53,6 @@ const toggleMenu = () => {
                             :class="['h-0.5 w-6 bg-main-600 dark:bg-main-400 rounded-full transition-all duration-300', isOpen ? '-rotate-45 -translate-y-1' : '']"></span>
                     </button>
                 </div>
-                <ul :class="[
-                    'inset-y-0 left-0 z-40 flex flex-col md:flex-row h-screen md:h-full w-4/5 max-w-sm md:w-auto bg-white dark:bg-zinc-900 md:bg-transparent dark:md:bg-transparent p-6 md:p-0 pt-24 md:pt-0 gap-4 md:gap-2 border-r md:border-r-0 border-gray-200 dark:border-zinc-800 shadow-xl md:shadow-none transition-transform duration-300 md:transition-none md:translate-x-0 md:relative', 
-                    isOpen ? 'translate-x-0' : '-translate-x-full'
-                ]">
-                    <li class="h-12 md:h-full">
-                        <!-- Logo -->
-                        <span class="flex h-12 h-full justify-center items-center dark:text-white">
-                            <strong>
-                                {{ config.public.appName }}
-                            </strong>
-                        </span>
-                    </li>
-                     <li v-for="route, index in routes" :key="index" class="h-12 md:h-full">
-                        <NuxtLinkLocale 
-                            :to="route.path"
-                            class="flex w-auto h-full items-center md:justify-center px-4 md:px-4 border-l-4 md:border-l-0 md:border-b border-transparent hover:border-main-100 dark:hover:border-main-300 dark:hover:bg-main-950/20 transition-all text-base md:text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-main-400 dark:hover:text-main-300 whitespace-nowrap"
-                        >{{ $t(route.label) }}</NuxtLinkLocale>
-                     </li>
-                 </ul>
             </div>
             <ul class="justify-end flex items-right gap-2 z-50">
                 <!-- Additional controls -->
@@ -62,5 +65,8 @@ const toggleMenu = () => {
 <style scoped>
 a.router-link-active {
     color: var(--color-main-100);
+}
+a.router-link-active span {
+    border-color: color-mix(in oklab, var(--color-main-100) 50%, transparent);
 }
 </style>

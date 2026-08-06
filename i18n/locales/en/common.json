@@ -9,6 +9,11 @@
                 "services": "Services",
                 "legal": "Legal"
             }
+        },
+        "theme": {
+            "system": "System",
+            "light": "Light",
+            "dark": "Dark"
         }
     }
 }

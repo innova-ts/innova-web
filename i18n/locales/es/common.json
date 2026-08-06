@@ -9,6 +9,11 @@
                 "services": "Servicios",
                 "legal": "Legal"
             }
+        },
+        "theme": {
+            "system": "Sistema",
+            "light": "Claro",
+            "dark": "Oscuro"
         }
     }
 }

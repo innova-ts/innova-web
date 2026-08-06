@@ -4,16 +4,16 @@ import { useColorMode } from '#imports';
 const colorMode = useColorMode();
 
 const themes = [
-    { value: 'system', label: 'System', icon: '💻' },
-    { value: 'light', label: 'Light', icon: '☀️' },
-    { value: 'dark', label: 'Dark', icon: '🌙' }
+    { value: 'system', label: 'common.theme.system', icon: '💻' },
+    { value: 'light', label: 'common.theme.light', icon: '☀️' },
+    { value: 'dark', label: 'common.theme.dark', icon: '🌙' }
 ];
 </script>
 <template>
     <ClientOnly>
         <select v-model="colorMode.preference">
             <template v-for="(item, index) in themes" :key="index">
-                <option :value="item.value">{{ item.icon }} - {{ item.label }}</option>
+                <option :value="item.value">{{ item.icon }} {{ $t(item.label) }}</option>
             </template>
         </select>
         <template #fallback>
