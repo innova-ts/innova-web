@@ -1,21 +1,24 @@
-<script lang="ts" setup>
+    <script lang="ts" setup>
+import { computed } from 'vue';
 import { useColorMode } from '#imports';
+import DropDownMenu from '~/components/web/forms/DropDownMenu.vue';
+import type { DropDownMenuOption } from '~/utils/types/Dropdown';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const colorMode = useColorMode();
 
-const themes = [
-    { value: 'system', label: 'common.theme.system', icon: '💻' },
-    { value: 'light', label: 'common.theme.light', icon: '☀️' },
-    { value: 'dark', label: 'common.theme.dark', icon: '🌙' }
-];
+const themes = computed<DropDownMenuOption[]>((): DropDownMenuOption[] => [
+    { value: 'system', label: t('common.theme.system'), icon: '💻' },
+    { value: 'light', label: t('common.theme.light'), icon: '☀️' },
+    { value: 'dark', label: t('common.theme.dark'), icon: '🌙' }
+]);
+
+
 </script>
 <template>
     <ClientOnly>
-        <select v-model="colorMode.preference">
-            <template v-for="(item, index) in themes" :key="index">
-                <option :value="item.value">{{ item.icon }} {{ $t(item.label) }}</option>
-            </template>
-        </select>
+        <DropDownMenu v-model="colorMode.preference" :options="themes"/>
         <template #fallback>
             <div
                 class="w-40 h-[38px] bg-gray-100 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg animate-pulse">

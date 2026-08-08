@@ -1,21 +1,20 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { useI18n } from 'vue-i18n';
+import DropDownMenu from "~/components/web/forms/DropDownMenu.vue";
+import type { DropDownMenuOption } from "~/utils/types/Dropdown";
 
 const { locale, locales: locs, setLocale } = useI18n();
 
-const readLocales = computed(() => {
-    return (locs.value as Array<any>).map((item) => ({
+const readLocales = computed<DropDownMenuOption[]>((): DropDownMenuOption[] => {
+    return (locs.value as Array<any>).map((item): DropDownMenuOption => ({
         value: item.code,
         label: item.name,
-        language: item.language
+        language: item.language,
     }));
 });
 
-const handleChangeLocale = async (ev: Event) => {
-    const selectedLocale = ((ev.target as HTMLSelectElement).value);
-    const item = readLocales.value.find((item) => item.value === selectedLocale);
-    if (!item?.value) return;
+const handleChangeLocale = (item: DropDownMenuOption): void => {
     const newLocal: string = item.value;
     setLocale(newLocal as any);
 };
@@ -23,7 +22,5 @@ const handleChangeLocale = async (ev: Event) => {
 </script>
 
 <template>
-    <select :value="locale" @change="handleChangeLocale($event)">
-        <option v-for="(l, idx) in readLocales" :key="idx" :value="l.value">{{ l.label }}</option>
-    </select>
+    <DropDownMenu :model-value="locale" :options="readLocales" @on-select="handleChangeLocale" />
 </template>

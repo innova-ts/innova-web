@@ -25,6 +25,7 @@ export const localeI18nOptions = {
     langDir: 'locales',
     defaultLocale: 'es',
     strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
     locales: getFiles([
         { code: 'es', name: 'Español', language: 'es-ES' },
         { code: 'en', name: 'English', language: 'en-US' }
