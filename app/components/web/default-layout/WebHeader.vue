@@ -20,7 +20,7 @@ const toggleMenu = () => {
         <nav class="h-full container-site flex items-center justify-between">
             <div class="flex h-full z-60">
                 <ul :class="[
-                    'inset-y-0 left-0 z-40 flex flex-col md:flex-row h-screen md:h-full w-4/5 max-w-sm md:w-auto bg-white dark:bg-zinc-900 md:bg-transparent dark:md:bg-transparent p-0 md:p-0 pt-10 md:pt-0 gap-4 md:gap-2 border-r md:border-r-0 border-gray-200 dark:border-zinc-800 shadow-xl md:shadow-none transition-transform duration-300 md:transition-none md:translate-x-0 fixed md:relative', 
+                    'inset-y-0 left-0 z-40 flex flex-col md:flex-row h-screen md:h-full w-4/5 max-w-sm md:w-auto bg-white dark:bg-zinc-900 md:bg-transparent dark:md:bg-transparent p-0 md:p-0 pt-10 md:pt-0 gap-3 md:gap-2 border-r md:border-r-0 border-gray-200 dark:border-zinc-800 shadow-xl md:shadow-none transition-transform duration-300 md:transition-none md:translate-x-0 fixed md:relative', 
                     isOpen ? 'translate-x-0' : '-translate-x-full'
                 ]">
                     <li class="h-12 md:h-full">
@@ -40,6 +40,11 @@ const toggleMenu = () => {
                             <span class="border-transparent border-b-2 transition-all group-hover/item-text:border-main-100/50 dark:group-hover/item-text:border-main-300">{{ $t(route.label) }}</span>
                         </NuxtLinkLocale>
                     </li>
+                    <li class="justify-end items-right gap-2 z-50 flex md:hidden absolute bottom-0 right-0 p-4">
+
+                        <LangSelector :auto-detect="true" />
+                        <ColorModeSelector :auto-detect="true" />
+                    </li>
                  </ul>
                  <div class="flex-1 flex justify-start items-center md:hidden">
                     <button @click="toggleMenu" type="button"
@@ -54,7 +59,7 @@ const toggleMenu = () => {
                     </button>
                 </div>
             </div>
-            <ul class="justify-end flex items-right gap-2 z-50">
+            <ul class="justify-end items-right gap-2 z-50 hidden md:flex">
                 <!-- Additional controls -->
                 <LangSelector />
                 <ColorModeSelector />

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 import GlobalTransition from '../utils/GlobalTransition.vue';
 import type { DropDownMenuOption } from '~/utils/types/Dropdown.ts';
 
@@ -7,6 +7,7 @@ const props = defineProps<{
     modelValue: string
     options: DropDownMenuOption[]
     label?: string 
+    autoDetect?: boolean
 }>();
 
 const emit = defineEmits<{
@@ -15,7 +16,10 @@ const emit = defineEmits<{
 }>();
 
 const isOpen = ref(false);
+const openUp = ref(false);
+const alignLeft = ref(false);
 const dropdownRef = ref<HTMLElement | null>(null);
+const menuRef = ref<HTMLElement | null>(null);
 
 const findItemByValue = (value: string): DropDownMenuOption|null => {
     return props.options.find((option): boolean => option.value === value) || null;
@@ -31,14 +35,60 @@ const handleClickOutside = (event: MouseEvent) => {
     }
 };
 
+const recomputeDirection = () => {
+    if (!props.autoDetect) {
+        openUp.value = false;
+        alignLeft.value = false;
+        return;
+    }
+    const menu = menuRef.value;
+    const anchor = dropdownRef.value;
+    if (!menu || !anchor) return;
+    const menuRect: DOMRect = menu.getBoundingClientRect();
+    const anchorRect: DOMRect = anchor.getBoundingClientRect();
+    const spaceBelow: number = window.innerHeight - anchorRect.bottom;
+    openUp.value = menuRect.height > spaceBelow;
+    alignLeft.value = anchorRect.right - menuRect.width < 0;
+};
+
+const menuPositionClass = computed<string>((): string => {
+    const vertical: string = openUp.value ? 'bottom-full mb-1.5' : 'mt-1.5';
+    const horizontal: string = alignLeft.value ? 'left-0' : 'right-0';
+    const origin: string = openUp.value
+        ? (alignLeft.value ? 'origin-bottom-left' : 'origin-bottom-right')
+        : (alignLeft.value ? 'origin-top-left' : 'origin-top-right');
+    return `${vertical} ${horizontal} ${origin}`;
+});
+
+const handleWindowEvents = () => {
+    if (isOpen.value) recomputeDirection();
+};
+
+watch(isOpen, (open) => {
+    if (open) {
+        nextTick(() => recomputeDirection());
+    } else {
+        openUp.value = false;
+        alignLeft.value = false;
+    }
+});
+
 const selectItem = (option: DropDownMenuOption) => {
     emit('update:modelValue', option.value);
     emit('on-select', option);
     isOpen.value = false;
 }
 
-onMounted(() => document.addEventListener('click', handleClickOutside))
-onUnmounted(() => document.removeEventListener('click', handleClickOutside));
+onMounted(() => {
+    document.addEventListener('click', handleClickOutside);
+    window.addEventListener('resize', handleWindowEvents);
+    window.addEventListener('scroll', handleWindowEvents, true);
+});
+onUnmounted(() => {
+    document.removeEventListener('click', handleClickOutside);
+    window.removeEventListener('resize', handleWindowEvents);
+    window.removeEventListener('scroll', handleWindowEvents, true);
+});
 
 </script>
 
@@ -56,7 +106,11 @@ onUnmounted(() => document.removeEventListener('click', handleClickOutside));
         <GlobalTransition>
             <template v-if="isOpen">
                 <div 
-                    class="absolute right-0 z-50 mt-1.5 min-w-full origin-top-right rounded-lg bg-bol dark:bg-bod shadow-lg border border-gray-200 dark:border-zinc-700 focus:outline-none"
+                    ref="menuRef"
+                    :class="[
+                        'absolute z-50 min-w-full rounded-lg bg-bol dark:bg-bod shadow-lg border border-gray-200 dark:border-zinc-700 focus:outline-none',
+                        menuPositionClass
+                    ]"
                 >
                     <div class="py-1">
                         <button v-for="(option) in options" :key="option.value" @click.prevent="selectItem(option)" :class="[
