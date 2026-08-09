@@ -3,6 +3,12 @@
         "home": "Inicio",
         "about": "Sobre nosotros",
         "ourTeam": "Nuestro equipo",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "footer": {
+            "customSoftware": "Software a medida",
+            "webApps": "Aplicaciones web",
+            "mobileApps": "Aplicaciones mobiles",
+            "privacyPolicy": "Politica de privacidad"
+        }
     }
 }

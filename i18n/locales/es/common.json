@@ -1,5 +1,19 @@
 {
     "common": {
-        
+        "brand": {
+            "slogan": "Construido para el futuro del código."
+        },
+        "footer": {
+            "copyRightMessage": "© {year} {appName}.",
+            "titles": {
+                "services": "Servicios",
+                "legal": "Legal"
+            }
+        },
+        "theme": {
+            "system": "Sistema",
+            "light": "Claro",
+            "dark": "Oscuro"
+        }
     }
 }
