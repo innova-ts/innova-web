@@ -3,7 +3,31 @@
         "presentation": {
             "title": "We turn ideas into",
             "subtitle": "high-performance code.",
-            "description": "We build scalable, secure, and future-ready software architectures. We elevate your business vision with engineering and precision."
+            "description": "We build scalable, secure, and future-ready software architectures. We elevate your business vision with engineering and precision.",
+            "startProject": "Start your project →",
+            "portfolio": "View portfolio"
+        },
+        "services": {
+            "title": "Our services",
+            "description": "Technical solutions to complex challenges.",
+            "mainServices": {
+                "custom": {
+                    "title": "Custom software",
+                    "content": "Software development from scratch. Monolithic or microservice architectures optimized for performance and enterprise security."
+                },
+                "web": {
+                    "title": "Web applications",
+                    "content": "Progressive web applications (PWA) and robust platforms with immersive interfaces."
+                },
+                "mobile": {
+                    "title": "Mobile Apps",
+                    "content": "Native and cross-platform development for seamless iOS and Android experiences."
+                },
+                "infrastructure": {
+                    "title": "Global Infrastructure",
+                    "content": "Cloud-based solutions for deploying and managing applications across multiple geographic regions with high availability and scalability."
+                }
+            }
         }
     }
 }

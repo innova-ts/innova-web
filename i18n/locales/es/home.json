@@ -3,7 +3,31 @@
         "presentation": {
             "title": "Transformamos ideas en",
             "subtitle": "código de alto rendimiento.",
-            "description": "Construimos arquitecturas de software escalables, seguras y preparadas para el futuro. Elevamos tu visión empresarial con ingeniería y presición."
+            "description": "Construimos arquitecturas de software escalables, seguras y preparadas para el futuro. Elevamos tu visión empresarial con ingeniería y presición.",
+            "startProject": "Empieza tu proyecto →",
+            "portfolio": "Ver Portfolio"
+        },
+        "services": {
+            "title": "Nuestros servicios",
+            "description": "Soluciones técnicas para desafíos complejos.",
+            "mainServices": {
+                "custom": {
+                    "title": "Software a medida",
+                    "content": "Desarrollo de sistemas a medida desde cero. Arquitecturas monolíticas o microservicios optimizados para el rendimiento y la seguridad empresarial."  
+                },
+                "web": {
+                    "title": "Aplicaciones web",
+                    "content": "Aplicaciones web progresivas (PWA) y plataformas robustas con interfaces inmersivas."
+                },
+                "mobile": {
+                    "title": "Aplicaciones móviles",
+                    "content": "Desarrollo nativo y multiplataforma para experiencias fluidas en iOS y Android."
+                },
+                "infrastructure": {
+                    "title": "Infraestructura global",
+                    "content": "Soluciones basadas en la nube para el despliegue y gestión de aplicaciones a travez de multiples regiones geográficas con alta disponibilidad y escalabilidad."
+                }
+            }
         }
     }
 }
