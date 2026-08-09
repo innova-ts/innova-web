@@ -28,6 +28,24 @@
                     "content": "Soluciones basadas en la nube para el despliegue y gestión de aplicaciones a travez de multiples regiones geográficas con alta disponibilidad y escalabilidad."
                 }
             }
+        },
+        "wcu": {
+            "title": "¿Por que elegirnos?",
+            "description": "Nuestro enfoque se basa en principios de ingeniería sólidos.",
+            "items": {
+                "innovation": {
+                    "title": "Innovación continua",
+                    "description": "Integramos las últimas tecnologías para mantener su producto a la vanguardia del mercado."
+                },
+                "scalability": {
+                    "title": "Escalabilidad",
+                    "description": "Diseñamos sistemas preparados para crecer con su demanda sin comprometer el rendimiento."
+                },
+                "techSupport": {
+                    "title": "Soporte técnico",
+                    "description": "Mantenimiento y monitoreo constante para asegurar operaciones ininterrumpidas."
+                }
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 import { navigateTo } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
+import WCUItem from '~/components/ui/home/WCUItem.vue';
 import Button from '~/components/web/forms/Button.vue';
 
 const goTo = (destiny: string) => {
@@ -38,8 +39,34 @@ const goTo = (destiny: string) => {
 
         <!-- Why choose us -->
         <section class="why-choose-us">
-            <div class="container-site">
-                Por que elegirnos
+            <div class="container-site py-10 text-center ">
+                <div class="mb-7">
+                    <h2 class="text-2xl font-bold">{{ $t('home.wcu.title') }}</h2>
+                    <h3 class="text-md dark:text-tod/70">{{ $t('home.wcu.description') }}</h3>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 relative">
+                    <div>
+                        <WCUItem 
+                            title-key="home.wcu.items.innovation.title"
+                            description-key="home.wcu.items.innovation.description"
+                        ></WCUItem>
+                    </div>
+                    <div>
+                        <WCUItem 
+                            title-key="home.wcu.items.scalability.title"
+                            description-key="home.wcu.items.scalability.description"
+                        ></WCUItem>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <WCUItem 
+                            title-key="home.wcu.items.techSupport.title"
+                            description-key="home.wcu.items.techSupport.description"
+                        ></WCUItem>
+                    </div>
+                    <!-- <div class="absolute flex w-full h-[60px] z-[0]">
+                        <hr class="m-auto relative border-0 bg-blue-400 h-[2px] w-[70%] bottom-0 z-[1]">
+                    </div> -->
+                </div>
             </div>
         </section>
 

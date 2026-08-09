@@ -28,6 +28,24 @@
                     "content": "Cloud-based solutions for deploying and managing applications across multiple geographic regions with high availability and scalability."
                 }
             }
+        },
+        "wcu": {
+            "title": "Why choose us?",
+            "description": "Our focus is based on solid engineering principles.",
+            "items": {
+                "innovation": {
+                    "title": "Continous Innovation",
+                    "description": "We integrate the latest technologies to keep your product at the forefront of the market."
+                },
+                "scalability": {
+                    "title": "Scalability",
+                    "description": "We design systems prepared to grow with your demand without compromising performance."
+                },
+                "techSupport": {
+                    "title": "Technical Support",
+                    "description": "Maintenance and constant monitoring to ensure uninterrupted operations."
+                }
+            }
         }
     }
 }
