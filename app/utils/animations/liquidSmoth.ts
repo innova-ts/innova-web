@@ -74,7 +74,6 @@ export function initBlobs(directive: string) {
             blob.move()
         });
     }
-
-    console.log('running animations')
+    
     requestAnimationFrame(update)
 }
