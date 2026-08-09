@@ -1,5 +1,5 @@
 <template>
     <div class="container-site">
-        Hola mundo
+
     </div>
 </template>
