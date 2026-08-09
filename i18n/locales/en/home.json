@@ -46,6 +46,13 @@
                     "description": "Maintenance and constant monitoring to ensure uninterrupted operations."
                 }
             }
+        },
+        "clients": {
+            "title": "Testimonials",
+            "statements": {
+                "susana": "Innova rebuild our legacy backend in 4 months. The latency was reduced by 40% and the infrastructure is finally predictable.",
+                "luigi": "The technical rigor of their team is incomparable. They don’t just write code, they design architectures meant to last."
+            }
         }
     }
 }

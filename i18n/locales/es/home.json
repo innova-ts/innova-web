@@ -46,6 +46,13 @@
                     "description": "Mantenimiento y monitoreo constante para asegurar operaciones ininterrumpidas."
                 }
             }
+        },
+        "clients": {
+            "title": "Testimonios",
+            "statements": {
+                "susana": "Innova reconstruyo nuestro backend heredado en 4 meses. La latencia se redujo en un 40% y la infraestructura es finalmente predecible.",
+                "luigi": "El rigor técnico de su equipo es incomparable. No solo escriben código, diseñan arquitecturas pensadas para durar."
+            }
         }
     }
 }
