@@ -1,9 +1,21 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue';
-import { initBlobs } from '~/utils/animations/liquidSmoth';
+import { onMounted, onUnmounted, ref } from 'vue';
+import { initBlobs, stopAnimation } from '~/utils/animations/liquidSmooth';
+
+const requestFrameId = ref<number|null>(null);
+
+const destroyAnimation = () => {
+	if (requestFrameId.value !== null) {
+		stopAnimation(requestFrameId.value);
+	}
+}
 
 onMounted(() => {
-	initBlobs('.bouncing-blob')
+	requestFrameId.value = initBlobs('.bouncing-blob')
+});
+
+onUnmounted(() => {
+	destroyAnimation();
 });
 </script>
 <template>

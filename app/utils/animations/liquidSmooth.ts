@@ -17,7 +17,6 @@ const createLiquidSmoothAnimator = function (element: HTMLDivElement, containerW
         element.style.top = `${initialY}px`;
         element.style.left = `${initialX}px`;
 
-
         return {
             el:element,
             size,
@@ -74,6 +73,11 @@ export function initBlobs(directive: string) {
             blob.move()
         });
     }
-    
-    requestAnimationFrame(update)
+
+    return requestAnimationFrame(update)
+}
+
+export function stopAnimation(requestFrameId: number)
+{
+	cancelAnimationFrame(requestFrameId);
 }

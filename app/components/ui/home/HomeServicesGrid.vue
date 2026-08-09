@@ -12,7 +12,7 @@ import { Icon } from '@iconify/vue';
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
             <article class="border-1 min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 p-4 sm:col-span-2 relative group/title overflow-hidden">
                 <div class="absolute z-0 inset-0 top-0 left-0 w-full">
-                    <img src="/images/pages/home/presentation/custom-software.webp" class="w-full h-full opacity-20 object-cover scale-105 transition-transform duration-700 ease-out group-hover/title:scale-110"/>
+                    <img src="/images/pages/home/presentation/custom-software.webp" class="w-full h-full opacity-20 object-cover scale-105 transition-transform duration-700 ease-out group-hover/title:scale-110" aria-hidden="true" loading="lazy" decoding="async" />
                 </div>
                 <div class="absolute inset-0 z-[1] bg-gradient-to-b from-via-bol/10 via-bol/30 to-bol dark:from-transparent dark:via-bod/40 dark:to-bod/95" ></div>
                 <div class="absolute bottom-4 mr-4 z-10">
@@ -32,7 +32,7 @@ import { Icon } from '@iconify/vue';
             </article>
             <article class="border-1 min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 p-4 relative group/title overflow-hidden">
                 <div class="absolute z-0 inset-0 top-0 left-0 w-full">
-                    <img src="/images/pages/home/presentation/mobile-apps.webp" class="w-full h-full opacity-20 object-cover scale-105 transition-transform duration-700 ease-out group-hover/title:scale-110"/>
+                    <img src="/images/pages/home/presentation/mobile-apps.webp" class="w-full h-full opacity-20 object-cover scale-105 transition-transform duration-700 ease-out group-hover/title:scale-110" aria-hidden="true" loading="lazy" decoding="async" />
                 </div>
                 <div class="absolute inset-0 z-[1] bg-gradient-to-b from-via-bol/10 via-bol/30 to-bol dark:from-transparent dark:via-bod/40 dark:to-bod/95" ></div>
                 <div class="absolute bottom-4 mr-4 z-10">
@@ -44,7 +44,7 @@ import { Icon } from '@iconify/vue';
             </article>
             <article class="border-1 min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 p-4 sm:col-span-2 relative group/title overflow-hidden">
                 <div class="absolute z-0 inset-0 top-0 left-0 w-full">
-                    <img src="/images/pages/home/presentation/infra.webp" class="w-full h-full opacity-20 object-cover scale-105 transition-transform duration-700 ease-out group-hover/title:scale-110"/>
+                    <img src="/images/pages/home/presentation/infra.webp" class="w-full h-full opacity-20 object-cover scale-105 transition-transform duration-700 ease-out group-hover/title:scale-110" aria-hidden="true" loading="lazy" decoding="async" />
                 </div>
                 <div class="absolute inset-0 z-[1] bg-gradient-to-b from-via-bol/10 via-bol/30 to-bol dark:from-transparent dark:via-bod/40 dark:to-bod/95" ></div>
                 <div class="absolute bottom-4 mr-4 z-10">

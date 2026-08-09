@@ -9,7 +9,7 @@ const props = defineProps<{
 
 const initials = computed(() => {
     const names: string[] = props.name.split(' ').filter(Boolean);
-    if(!names || names.length === 0) return '-';
+    if(names.length === 0) return '-';
     if (names.length === 1) {
         return (names[0] as string).charAt(0).toUpperCase();
     }
