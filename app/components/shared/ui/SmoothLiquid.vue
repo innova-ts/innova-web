@@ -1,25 +1,21 @@
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import { initBlobs, stopAnimation } from '~/utils/animations/liquidSmooth';
+import { initBlobs, type BlobController } from '~/utils/animations/liquidSmooth';
 
-const requestFrameId = ref<number|null>(null);
-
-const destroyAnimation = () => {
-	if (requestFrameId.value !== null) {
-		stopAnimation(requestFrameId.value);
-	}
-}
+const containerRef = ref<HTMLElement | null>(null);
+let blobController: BlobController | null = null;
 
 onMounted(() => {
-	requestFrameId.value = initBlobs('.bouncing-blob')
+	blobController = initBlobs('.bouncing-blob', containerRef.value);
 });
 
 onUnmounted(() => {
-	destroyAnimation();
+	blobController?.stop();
+	blobController = null;
 });
 </script>
 <template>
-	<div class="absolute w-full h-full">
+	<div ref="containerRef" class="absolute w-full h-full">
 		<div class="absolute z-[1] top-0 left-0 w-full h-full">
 			<div class="transition-all absolute z-[2] top-0 left-0 w-full h-full light:backdrop-blur-[140px] dark:backdrop-blur-[140px] pointer-events-none max-[1200px]:backdrop-blur-[20px] max-[500px]:backdrop-blur-[90px]"></div>
 			<div class="absolute z-[1] top-0 left-0 w-full h-full">

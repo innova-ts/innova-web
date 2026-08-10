@@ -22,5 +22,10 @@ const handleChangeLocale = (item: DropDownMenuOption): void => {
 </script>
 
 <template>
-    <DropDownMenu :model-value="locale" :options="readLocales" @on-select="handleChangeLocale" />
+    <ClientOnly>
+        <DropDownMenu :model-value="locale" :options="readLocales" @on-select="handleChangeLocale" />
+        <template #fallback>
+            <div class="w-20 h-[38px] bg-gray-100 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg animate-pulse"></div>
+        </template>
+    </ClientOnly>
 </template>

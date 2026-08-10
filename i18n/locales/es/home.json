@@ -1,5 +1,9 @@
 {
     "home": {
+        "seo": {
+            "title": "Bienvenidos",
+            "description": "Desarrollo de software a medida por un equipo experto. Creamos aplicaciones web escalables, APIs y soluciones digitales para tu empresa."
+        },
         "presentation": {
             "title": "Transformamos ideas en",
             "subtitle": "código de alto rendimiento.",

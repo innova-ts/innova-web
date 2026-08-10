@@ -1,10 +1,19 @@
 <script lang="ts" setup>
-import { navigateTo, useSeoMeta } from '#app';
+import { navigateTo } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
 import Testimonial from '~/components/ui/home/Testimonial.vue';
 import WCUItem from '~/components/ui/home/WCUItem.vue';
 import Button from '~/components/web/forms/Button.vue';
+import { useSeo } from '~/composables/seo/useSeo';
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+
+useSeo({
+    title: t('home.seo.title'),
+    description: t('home.seo.description')
+});
 
 </script>
 <template>
