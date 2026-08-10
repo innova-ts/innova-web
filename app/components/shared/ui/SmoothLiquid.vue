@@ -1,0 +1,35 @@
+<script lang="ts" setup>
+import { onMounted, onUnmounted, ref } from 'vue';
+import { initBlobs, type BlobController } from '~/utils/animations/liquidSmooth';
+
+const containerRef = ref<HTMLElement | null>(null);
+let blobController: BlobController | null = null;
+
+onMounted(() => {
+	blobController = initBlobs('.bouncing-blob', containerRef.value);
+});
+
+onUnmounted(() => {
+	blobController?.stop();
+	blobController = null;
+});
+</script>
+<template>
+	<div ref="containerRef" class="absolute w-full h-full">
+		<div class="absolute z-[1] top-0 left-0 w-full h-full">
+			<div class="transition-all absolute z-[2] top-0 left-0 w-full h-full light:backdrop-blur-[140px] dark:backdrop-blur-[140px] pointer-events-none max-[1200px]:backdrop-blur-[20px] max-[500px]:backdrop-blur-[90px]"></div>
+			<div class="absolute z-[1] top-0 left-0 w-full h-full">
+				<div class="bouncing-blob absolute z-[1] top-0 left-0 w-[32vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-200/5 dark:bg-main-900 max-[500px]:w-[60vw]"></div>
+				<div class="bouncing-blob absolute z-[1] top-0 left-0 w-[32vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-300/2 dark:bg-main-900 max-[500px]:w-[60vw]"></div>
+				<div class="bouncing-blob absolute z-[1] top-0 left-0 w-[32vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-100/10 dark:bg-main-900 max-[500px]:w-[60vw]"></div>
+				<div class="bouncing-blob absolute z-[2] top-0 left-0 w-[15vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-50/10 dark:bg-white"></div>
+				<div class="bouncing-blob absolute z-[1] top-0 left-0 w-[32vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-400/10 dark:bg-main-400/50 max-[500px]:w-[60vw]"></div>
+				<div class="bouncing-blob absolute z-[1] top-0 left-0 w-[32vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-200/10 dark:bg-main-500/10 max-[500px]:w-[60vw]"></div>
+				<div class="bouncing-blob absolute z-[1] top-0 left-0 w-[32vw] aspect-square rounded-full will-change-transform origin-top-left light:bg-main-300/20 dark:bg-main-100/80 max-[500px]:w-[60vw]"></div>
+			</div>
+		</div>
+		<div class="relative z-10 w-full h-full">
+			<slot></slot>
+		</div>
+	</div>
+</template>

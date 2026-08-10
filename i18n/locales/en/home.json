@@ -1,0 +1,62 @@
+{
+    "home": {
+        "seo": {
+            "title": "Welcome",
+            "description": "Custom software development by an expert team of developers. We build scalable web applications, APIs, and digital solutions for your business."
+        },
+        "presentation": {
+            "title": "We turn ideas into",
+            "subtitle": "high-performance code.",
+            "description": "We build scalable, secure, and future-ready software architectures. We elevate your business vision with engineering and precision.",
+            "startProject": "Start your project →",
+            "portfolio": "View portfolio"
+        },
+        "services": {
+            "title": "Our services",
+            "description": "Technical solutions to complex challenges.",
+            "mainServices": {
+                "custom": {
+                    "title": "Custom software",
+                    "content": "Software development from scratch. Monolithic or microservice architectures optimized for performance and enterprise security."
+                },
+                "web": {
+                    "title": "Web applications",
+                    "content": "Progressive web applications (PWA) and robust platforms with immersive interfaces."
+                },
+                "mobile": {
+                    "title": "Mobile Apps",
+                    "content": "Native and cross-platform development for seamless iOS and Android experiences."
+                },
+                "infrastructure": {
+                    "title": "Global Infrastructure",
+                    "content": "Cloud-based solutions for deploying and managing applications across multiple geographic regions with high availability and scalability."
+                }
+            }
+        },
+        "wcu": {
+            "title": "Why choose us?",
+            "description": "Our focus is based on solid engineering principles.",
+            "items": {
+                "innovation": {
+                    "title": "Continous Innovation",
+                    "description": "We integrate the latest technologies to keep your product at the forefront of the market."
+                },
+                "scalability": {
+                    "title": "Scalability",
+                    "description": "We design systems prepared to grow with your demand without compromising performance."
+                },
+                "techSupport": {
+                    "title": "Technical Support",
+                    "description": "Maintenance and constant monitoring to ensure uninterrupted operations."
+                }
+            }
+        },
+        "clients": {
+            "title": "Testimonials",
+            "statements": {
+                "susana": "Innova rebuild our legacy backend in 4 months. The latency was reduced by 40% and the infrastructure is finally predictable.",
+                "luigi": "The technical rigor of their team is incomparable. They don’t just write code, they design architectures meant to last."
+            }
+        }
+    }
+}

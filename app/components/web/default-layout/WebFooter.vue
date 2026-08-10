@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { useRuntimeConfig } from '#app';
-import { computed, reactive } from 'vue';
+import { computed, onMounted, reactive, ref } from 'vue';
 
-const currentYear = computed(() => new Date().getFullYear());
+const currentYear = ref<number | null>(null);
+onMounted(() => { currentYear.value = new Date().getFullYear(); });
 const config = useRuntimeConfig();
 const appNameFirstLetter = computed(() => config.public.appName?.trim()?.charAt(0)?.toUpperCase() || "")
 const filterKey = 'serviceType';
@@ -41,10 +42,15 @@ const policies = reactive([
                         </span>
                     </div>
                     <p class="text-sm text-tol/70 dark:text-tod/70 leading-relaxed max-w-sm">
-                        <span>{{ $t('common.footer.copyRightMessage', {
-                            year: currentYear,
-                            appName: config.public.appName
-                        }) }}</span> - 
+                        <ClientOnly>
+                            <span>{{ $t('common.footer.copyRightMessage', {
+                                year: currentYear,
+                                appName: config.public.appName
+                            }) }}</span> - 
+                            <template #fallback>
+                                <span>{{ config.public.appName }}</span> -
+                            </template>
+                        </ClientOnly>
                         <span>{{ $t('common.brand.slogan') }}</span>
                     </p>
                 </div>
