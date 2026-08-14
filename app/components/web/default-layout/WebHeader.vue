@@ -61,8 +61,8 @@ const toggleMenu = () => {
             </div>
             <ul class="justify-end items-right gap-2 z-50 hidden md:flex">
                 <!-- Additional controls -->
-                <LangSelector />
                 <ColorModeSelector />
+                <LangSelector />
             </ul>
         </nav>
     </header>

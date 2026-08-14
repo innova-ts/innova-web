@@ -2,6 +2,7 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 import GlobalTransition from '../utils/GlobalTransition.vue';
 import type { DropDownMenuOption } from '~/utils/types/Dropdown.ts';
+import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
 
 const props = defineProps<{
     modelValue: string
@@ -94,10 +95,11 @@ onUnmounted(() => {
 
 <template>
     <div ref="dropdownRef" class="relative inline-block text-left text-sm">
-        <button
-            @click.prevent="isOpen = !isOpen"
-        >
-            <span class="text-gray-700 dark:text-zinc-300"><span v-if="selectedItem?.icon">{{ selectedItem.icon }}</span> {{ selectedItem.label }}</span>
+        <button @click.prevent="isOpen = !isOpen">
+            <span class="text-gray-700 dark:text-zinc-300 inline-flex items-center gap-2">
+                <ClientIcon v-if="selectedItem.icon" :icon="selectedItem.icon"/>
+                {{ selectedItem.label }}
+            </span>
             <span
                 class="ml-2 h-4 w-4 border-r-2 border-b-2 border-gray-400 dark:border-zinc-400 transform transition-transform duration-200 inline-block w-[6px] h-[6px]"
                 :class="isOpen ? '-rotate-135 translate-y-0.5' : 'rotate-45 -translate-y-0.5'"
@@ -119,7 +121,7 @@ onUnmounted(() => {
                                 ? 'text-main-500 dark:text-main-400 font-medium bg-gray-50 dark:bg-bod/30'
                                 : 'text-gray-700 dark:text-zinc-300'
                         ]">
-                            <span v-if="option.icon">{{ option.icon }}</span>
+                            <ClientIcon v-if="option.icon" :icon="option.icon" />
                             <span>{{ option.label }}</span>
                         </button>
                     </div>
