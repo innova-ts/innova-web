@@ -20,7 +20,7 @@ const buttonClass = computed<string>((): string => {
         none: '',
         primary: primaryVariant,
         secondary: '',
-        outlined: 'bg-transparent border-[1.5px] border-main-100 text-main-200',
+        outlined: 'bg-transparent border-2 border-main-100 text-main-200',
         text: 'bg-transparent border-0 border-main-200 text-tol dark:text-tod',
         link: 'bg-transparent border-0 border-main-200 text-tol dark:text-tod hover:underline',
     }

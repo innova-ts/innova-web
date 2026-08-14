@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { navigateTo } from '#app';
+import { navigateTo, useRuntimeConfig } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
 import Testimonial from '~/components/ui/home/Testimonial.vue';
@@ -7,8 +7,11 @@ import WCUItem from '~/components/ui/home/WCUItem.vue';
 import Button from '~/components/web/forms/Button.vue';
 import { useSeo } from '~/composables/seo/useSeo';
 import { useI18n } from "vue-i18n";
+import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
 
 const { t } = useI18n();
+
+const config = useRuntimeConfig();
 
 useSeo({
     title: t('home.seo.title'),
@@ -23,15 +26,20 @@ useSeo({
             <SmoothLiquid>
                 <div class="flex h-full">
                     <div class="m-auto container-site">
-                        <h1 class="text-4xl sm:text-5xl text-center font-bold">
-                            {{ $t('home.presentation.title') }}<br>
-                            <span class="text-main-200 dark:text-main-50">{{ $t('home.presentation.subtitle') }}</span>
-                        </h1>
+                        <h1 class="text-5xl sm:text-6xl text-center font-bold text-main-200 dark:text-main-50">{{ config.public.appName }}</h1>
+                        <h2 class="text-xl sm:text-3xl text-center font-bold w-full sm:w-[80%] md:w-[60%] lg:w-[40%] m-auto">
+                            {{ $t('home.presentation.title') }} {{ $t('home.presentation.subtitle') }}
+                        </h2>
                         <p class="m-auto text-md sm:text-xl text-center py-8 w-[80%] sm:w-[60%]">{{ $t('home.presentation.description') }}</p>
                         <div class="flex">
-                            <div class="m-auto flex gap-2">
-                                <Button size="md" @click="navigateTo('/contact')">{{ $t('home.presentation.startProject') }}</Button>
-                                <Button variant="outlined" size="md" class="dark:text-white" @click="navigateTo('/about#portfolio')">{{ $t('home.presentation.portfolio') }}</Button>
+                            <div class="m-auto flex flex-col sm:flex-row gap-2">
+                                <Button size="md" class="light:text-white font-[625]" @click="navigateTo('/contact')">
+                                    <span class="flex gap-1 items-center">
+                                        {{ $t('home.presentation.startProject') }}
+                                        <ClientIcon icon="maki:arrow" />
+                                    </span>
+                                </Button>
+                                <Button variant="outlined" size="md" class="dark:text-white font-[500]" @click="navigateTo('/about#portfolio')">{{ $t('home.presentation.portfolio') }}</Button>
                             </div>
                         </div>
                     </div>
