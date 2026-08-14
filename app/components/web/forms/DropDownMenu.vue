@@ -94,8 +94,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div ref="dropdownRef" class="relative inline-block text-left text-sm">
-        <button @click.prevent="isOpen = !isOpen">
+    <div 
+        ref="dropdownRef" 
+        class="relative text-left text-sm justify-center inline-block mt-auto"
+    >
+        <button @click.prevent="isOpen = !isOpen" class="inline-flex items-center">
             <span class="text-gray-700 dark:text-zinc-300 inline-flex items-center gap-2">
                 <ClientIcon v-if="selectedItem.icon" :icon="selectedItem.icon"/>
                 {{ selectedItem.label }}

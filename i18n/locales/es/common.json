@@ -11,9 +11,15 @@
             }
         },
         "theme": {
-            "system": "Sistema",
-            "light": "Claro",
-            "dark": "Oscuro"
+            "ariaLabel": {
+                "dark": "Cambiar a modo claro",
+                "light": "Cambiar a modo oscuro"
+            },
+            "modes": {
+                "system": "Sistema",
+                "light": "Claro",
+                "dark": "Oscuro"
+            }
         }
     }
 }
