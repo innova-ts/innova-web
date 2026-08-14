@@ -3,11 +3,11 @@ import { navigateTo, useRuntimeConfig } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
 import Testimonial from '~/components/ui/home/Testimonial.vue';
-import WCUItem from '~/components/ui/home/WCUItem.vue';
 import Button from '~/components/web/forms/Button.vue';
 import { useSeo } from '~/composables/seo/useSeo';
 import { useI18n } from "vue-i18n";
 import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
+import WCU from '~/components/ui/home/WCU.vue';
 
 const { t } = useI18n();
 
@@ -48,53 +48,16 @@ useSeo({
         </section>
 
         <!-- Services -->
-        <section class="min-h-[300px] bg-main-900/3 dark:bg-main-900/4">
+        <section class="min-h-[300px] bg-white dark:bg-main-900/4">
             <div class="container-site py-10">
                 <HomeServicesGrid />
             </div>
         </section>
 
         <!-- Why choose us -->
-        <section>
-            <div class="container-site py-10 text-center relative">
-                <div class="mb-7">
-                    <h2 class="text-2xl font-bold">{{ $t('home.wcu.title') }}</h2>
-                    <h3 class="text-md dark:text-tod/70">{{ $t('home.wcu.description') }}</h3>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 relative">
-                    <div class="hidden sm:flex items-center justify-center absolute w-full top-6 ">
-                        <div 
-                            :class="[
-                                'h-[2px] z-[0] pointer-events-none w-[60%] m-auto', 
-                                'dark:bg-[linear-gradient(90deg,transparent_0%,color-mix(in_oklab,var(--color-main-100)_50%,transparent)_15%,transparent_40%,transparent_60%,color-mix(in_oklab,var(--color-main-100)_50%,transparent)_85%,transparent_100%)]',
-                                'light:bg-[linear-gradient(90deg,transparent_0%,var(--color-main-50)_15%,transparent_40%,transparent_60%,var(--color-main-50)_85%,transparent_100%)]'
-                            ]"
-                        ></div>
-
-                        
-                    </div>
-                    <div class="relative z-10">
-                        <WCUItem 
-                            title-key="home.wcu.items.innovation.title"
-                            description-key="home.wcu.items.innovation.description"
-                            icon="iconoir:light-bulb"
-                        />
-                    </div>
-                    <div class="relative z-10">
-                        <WCUItem 
-                            title-key="home.wcu.items.scalability.title"
-                            description-key="home.wcu.items.scalability.description"
-                            icon="material-symbols:layers"
-                        />
-                    </div>
-                    <div class="col-span-2 sm:col-span-1 relative z-10">
-                        <WCUItem 
-                            title-key="home.wcu.items.techSupport.title"
-                            description-key="home.wcu.items.techSupport.description"
-                            icon="material-symbols:support-agent-rounded"
-                        />
-                    </div>
-                </div>
+        <section class="bg-bod-soft/1 border-t-4 border-b border-main-900/10 dark:border-main-400 shadow-tol dark:shadow-zinc-900 shadow-2xl">
+            <div class="container-site py-0 sm:py-10 px-0! sm:px-4 text-center relative mt-10 sm:my-15">
+                <WCU />
             </div>
         </section>
 

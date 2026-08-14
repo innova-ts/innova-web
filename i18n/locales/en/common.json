@@ -8,7 +8,9 @@
             "titles": {
                 "services": "Services",
                 "legal": "Legal"
-            }
+            },
+            "mailUs": "Send us a message at: ",
+            "socialNetworks": "Or visit our social networks: "
         },
         "theme": {
             "ariaLabel": {
