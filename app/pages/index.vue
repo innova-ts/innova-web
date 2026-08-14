@@ -2,12 +2,12 @@
 import { navigateTo, useRuntimeConfig } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
-import Testimonial from '~/components/ui/home/Testimonial.vue';
 import Button from '~/components/web/forms/Button.vue';
 import { useSeo } from '~/composables/seo/useSeo';
 import { useI18n } from "vue-i18n";
 import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
 import WCU from '~/components/ui/home/WCU.vue';
+import TestimonialsList from '~/components/ui/home/TestimonialsList.vue';
 
 const { t } = useI18n();
 
@@ -55,30 +55,16 @@ useSeo({
         </section>
 
         <!-- Why choose us -->
-        <section class="bg-bod-soft/1 border-t-4 border-b border-main-900/10 dark:border-main-400 shadow-tol dark:shadow-zinc-900 shadow-2xl">
+        <section class="relative z-10 bg-bod-soft/1 border-t-4 border-b border-main-900/10 dark:border-main-400 shadow-bod/7 dark:shadow-zinc-800 shadow-xl">
             <div class="container-site py-0 sm:py-10 px-0! sm:px-4 text-center relative mt-10 sm:my-15">
                 <WCU />
             </div>
         </section>
 
         <!-- Clients -->
-        <section class="min-h-[300px] bg-zinc-50/90 dark:bg-bod-soft/30">
-            <div class="container-site py-10">
-                <div class="mb-7">
-                    <h2 class="text-2xl font-bold">{{ $t('home.clients.title') }}</h2>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Testimonial 
-                        name="Susana Horia"
-                        position="CTO. Fintech Solutions."
-                        :statement="$t('home.clients.statements.susana')"
-                    />
-                    <Testimonial 
-                        name="Luigi Mada"
-                        position="VP Engineering, Datacorp."
-                        :statement="$t('home.clients.statements.luigi')"                    
-                    />
-                </div>
+        <section class="relative bg-gradient-to-b from-zinc-50 via-zinc-100/50 to-zinc-50 py-16 dark:from-bod-soft/20 dark:via-bod-soft/40 dark:to-bod-soft/20 sm:py-24">
+            <div class="container-site max-w-6xl relative overflow-x-clip">
+                <TestimonialsList />
             </div>
         </section>
     </div>

@@ -33,7 +33,7 @@ defineProps<{
                 <h3 class="text-base font-semibold tracking-tight text-zinc-900 dark:text-white">
                     {{ $t(titleKey) }}
                 </h3>
-                <p class="mt-2 text-sm leading-relaxed text-tol/70 dark:text-tod/70">
+                <p class="mt-2 text-md leading-relaxed text-tol/70 dark:text-tod/70">
                     {{ $t(descriptionKey) }}
                 </p>
             </div>

@@ -13,7 +13,6 @@
         },
         "services": {
             "title": "Nuestros servicios",
-            "description": "Soluciones técnicas para desafíos complejos.",
             "mainServices": {
                 "custom": {
                     "title": "Software a medida",
@@ -53,9 +52,11 @@
         },
         "clients": {
             "title": "Testimonios",
+            "description": "Clientes del sector tecnológico que confían en nosotros para impulsar sus proyectos, hoy y cada día.",
             "statements": {
                 "susana": "Innova reconstruyo nuestro backend heredado en 4 meses. La latencia se redujo en un 40% y la infraestructura es finalmente predecible.",
-                "luigi": "El rigor técnico de su equipo es incomparable. No solo escriben código, diseñan arquitecturas pensadas para durar."
+                "luigi": "El rigor técnico de su equipo es incomparable. No solo escriben código, diseñan arquitecturas pensadas para durar.",
+                "salvador": "Excelente servicio, gran dominio técnico y entregas a tiempo. Un socio tecnológico de total confianza."
             }
         }
     }
