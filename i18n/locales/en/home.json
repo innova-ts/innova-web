@@ -52,11 +52,13 @@
         },
         "clients": {
             "title": "Testimonials",
-            "description": "Clients in the technology sector who rely on us to drive their projects forward—today and every day.",
+            "quote": "Our clients’ trust is built on results that speak for themselves, with solutions designed to meet their goals and deliver lasting value.",
+            "description": "Every project reflects our commitment to excellence, creating experiences our clients value and confidently endorse through their own words.",
             "statements": {
                 "susana": "Innova rebuild our legacy backend in 4 months. The latency was reduced by 40% and the infrastructure is finally predictable.",
                 "luigi": "The technical rigor of their team is incomparable. They don’t just write code, they design architectures meant to last.",
-                "salvador": "Excellent service, great technical expertise, and on-time delivery. A truly reliable tech partner."
+                "salvador": "Excellent service, great technical expertise, and on-time delivery. A truly reliable tech partner.",
+                "elena": "Excellent service, great communication, and outstanding results. The team understood our needs and delivered an efficient, professional, high-quality solution. Highly recommended!."
             }
         }
     }
