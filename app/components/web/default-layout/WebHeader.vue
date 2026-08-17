@@ -41,7 +41,6 @@ const toggleMenu = () => {
                         </NuxtLinkLocale>
                     </li>
                     <li class="justify-end items-right gap-2 z-50 flex md:hidden absolute bottom-0 right-0 p-4">
-
                         <LangSelector :auto-detect="true" />
                         <ColorModeSelector :auto-detect="true" />
                     </li>
@@ -59,10 +58,10 @@ const toggleMenu = () => {
                     </button>
                 </div>
             </div>
-            <ul class="justify-end items-right gap-2 z-50 hidden md:flex">
+            <ul class="justify-end items-right gap-3 z-50 hidden md:flex">
                 <!-- Additional controls -->
-                <LangSelector />
                 <ColorModeSelector />
+                <LangSelector />
             </ul>
         </nav>
     </header>

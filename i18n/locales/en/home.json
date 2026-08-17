@@ -8,12 +8,11 @@
             "title": "We turn ideas into",
             "subtitle": "high-performance code.",
             "description": "We build scalable, secure, and future-ready software architectures. We elevate your business vision with engineering and precision.",
-            "startProject": "Start your project →",
+            "startProject": "Start your project",
             "portfolio": "View portfolio"
         },
         "services": {
             "title": "Our services",
-            "description": "Technical solutions to complex challenges.",
             "mainServices": {
                 "custom": {
                     "title": "Custom software",
@@ -53,9 +52,13 @@
         },
         "clients": {
             "title": "Testimonials",
+            "quote": "Our clients’ trust is built on results that speak for themselves, with solutions designed to meet their goals and deliver lasting value.",
+            "description": "Every project reflects our commitment to excellence, creating experiences our clients value and confidently endorse through their own words.",
             "statements": {
                 "susana": "Innova rebuild our legacy backend in 4 months. The latency was reduced by 40% and the infrastructure is finally predictable.",
-                "luigi": "The technical rigor of their team is incomparable. They don’t just write code, they design architectures meant to last."
+                "luigi": "The technical rigor of their team is incomparable. They don’t just write code, they design architectures meant to last.",
+                "salvador": "Excellent service, great technical expertise, and on-time delivery. A truly reliable tech partner.",
+                "elena": "Excellent service, great communication, and outstanding results. The team understood our needs and delivered an efficient, professional, high-quality solution. Highly recommended!."
             }
         }
     }

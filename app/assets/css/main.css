@@ -44,6 +44,13 @@
 .layout-enter-from, .layout-leave-to, .page-leave-to, .page-enter-from { opacity: 0; }
 
 ::selection {
-    background-color: var(--color-main-50);
+    background-color: var(--color-main-300);
     color: var(--color-text-selected);
+}
+
+* {
+    outline: transparent;
+}
+*:focus {
+    outline: solid 0.5px var(--color-main-100);
 }

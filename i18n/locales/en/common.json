@@ -8,12 +8,20 @@
             "titles": {
                 "services": "Services",
                 "legal": "Legal"
-            }
+            },
+            "mailUs": "Send us a message at: ",
+            "socialNetworks": "Or visit our social networks: "
         },
         "theme": {
-            "system": "System",
-            "light": "Light",
-            "dark": "Dark"
+            "ariaLabel": {
+                "dark": "Switch to light mode",
+                "light": "Switch to dark mode"
+            },
+            "modes": {
+                "system": "System",
+                "light": "Light",
+                "dark": "Dark"
+            }
         }
     }
 }

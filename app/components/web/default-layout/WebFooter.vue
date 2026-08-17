@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useRuntimeConfig } from '#app';
 import { computed, onMounted, reactive, ref } from 'vue';
+import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
+import GlobalTransition from '../utils/GlobalTransition.vue';
 
 const currentYear = ref<number | null>(null);
 onMounted(() => { currentYear.value = new Date().getFullYear(); });
@@ -21,11 +23,15 @@ const routes = reactive([
         label: "navigation.footer.mobileApps"
     },
 ]);
-const policies = reactive([
+const InterestLinks = reactive([
     {
         path: `policy/privacy`,
         label: "navigation.footer.privacyPolicy"
-    }
+    },
+    {
+        path: `site-map`,
+        label: "navigation.footer.sitemap"
+    },
 ])
 </script>
 <template>
@@ -53,6 +59,36 @@ const policies = reactive([
                         </ClientOnly>
                         <span>{{ $t('common.brand.slogan') }}</span>
                     </p>
+                    <div class="block">
+                        <span class="text-sm text-tol/70 dark:text-tod/70">
+                            {{ $t('common.footer.mailUs') }} 
+                            <ClientOnly>
+                                <a :href="`mailto:${config.public.businessEmail}`" class="text-main-100" rel="noopener noreferrer" aria-hidden="true">
+                                    {{ config.public.businessEmail }}
+                                </a>
+                            </ClientOnly>
+                        </span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                        <span class="text-sm text-tol/70 dark:text-tod/70">{{ $t('common.footer.socialNetworks') }}</span>
+                        <ul class="flex flex-row gap-3">
+                            <li>
+                                <a :href="config.public.socialNetworks.facebook" target="_blank" rel="noopener noreferrer" aria-hidden="true" class="text-tol/70 dark:text-tol hover:text-main-100 transition-all" >
+                                    <ClientIcon icon="prime:facebook" class="text-3xl" />
+                                </a>
+                            </li>
+                            <li>
+                                <a :href="config.public.socialNetworks.instagram" target="_blank" rel="noopener noreferrer" aria-hidden="true" class="text-tol/70 dark:text-tol hover:text-main-100 transition-all" >
+                                    <ClientIcon icon="prime:instagram" class="text-3xl" />
+                                </a>
+                            </li>
+                            <li>
+                                <a :href="config.public.socialNetworks.tiktok" target="_blank" rel="noopener noreferrer" aria-hidden="true" class="text-tol/70 dark:text-tol hover:text-main-100 transition-all" >
+                                    <ClientIcon icon="prime:tiktok" class="text-3xl" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="space-y-4 col-span-1">
                     <ul class="space-y-2 w-full decoration-violet-700-">
@@ -74,12 +110,12 @@ const policies = reactive([
                         <li>
                             <h2 class="text-md font-medium text-main-200">{{ $t('common.footer.titles.legal') }}</h2>
                         </li>
-                        <li v-for="policy, policyIndex in policies" :key="`policy-${policyIndex}`">
+                        <li v-for="il, ilIndex in InterestLinks" :key="`policy-${ilIndex}`">
                             <NuxtLinkLocale 
-                                :to="policy.path" 
+                                :to="il.path" 
                                 class="text-sm text-slate-400 hover:text-main-100 transition-colors duration-200 inline-block cursor-pointer"
                             >
-                                {{ $t(policy.label) }}
+                                {{ $t(il.label) }}
                             </NuxtLinkLocale>
                         </li>
                     </ul>

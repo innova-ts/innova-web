@@ -21,6 +21,18 @@ const getFiles = (locs: Array<LocalesFormat>) => {
     return nl;
 }
 
+// Check all flags in https://icon-sets.iconify.design/ (twitter emoji recomended for concistency)
+
+export const IconsByLocale = {
+    es: 'twemoji:flag-spain',
+    en: 'twemoji:flag-united-states',
+
+    // Add all the locales as you need, eg:
+    // ptg: 'twemoji:flag-portugal'
+    // ja: 'twemoji:flag-japan'
+}
+
+
 export const localeI18nOptions = {
     lazy: true,
     langDir: 'locales',
