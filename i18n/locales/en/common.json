@@ -1,7 +1,8 @@
 {
     "common": {
         "brand": {
-            "slogan": "Build for the future of code."
+            "slogan": "Build for the future of code.",
+            "logoAlt": "{appName}'s logo"
         },
         "footer": {
             "copyRightMessage": "© {year} {appName}.",

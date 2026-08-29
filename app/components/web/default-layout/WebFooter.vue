@@ -3,6 +3,7 @@ import { useRuntimeConfig } from '#app';
 import { computed, onMounted, reactive, ref } from 'vue';
 import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
 import GlobalTransition from '../utils/GlobalTransition.vue';
+import SmartImg from '~/components/shared/ui/SmartImg.vue';
 
 const currentYear = ref<number | null>(null);
 onMounted(() => { currentYear.value = new Date().getFullYear(); });
@@ -41,7 +42,14 @@ const InterestLinks = reactive([
                 <div class="space-y-6 pr-0 lg:pr-8 col-span-2 sm:col-span-2">
                     <div class="flex items-center gap-2">
                         <div class="h-6 w-6 rounded bg-slate-100 flex items-center justify-center">
-                            <span class="text-tol font-bold text-xs">{{ appNameFirstLetter }}</span>
+                            <span class="text-tol font-bold text-xs">
+                                <SmartImg 
+                                    src="/branding/isotipo-sm" 
+                                    :alt="$t('common.brand.logoAlt', {appName: config.public.appName})" 
+                                    fallback="png" 
+                                    width="20px"
+                                />
+                            </span>
                         </div>
                         <span class="text-lg font-semibold tracking-tight">
                             <span class="text-main-100 font-normal">{{ config.public.appName }}</span>
