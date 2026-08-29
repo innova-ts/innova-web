@@ -13,7 +13,7 @@ const props = defineProps<{
 </script>
 <template>
     <article 
-        class="rounded-md sm:rounded-lg border-1 min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 relative group/title overflow-hidden shadow-bod/30 dark:shadow-main-800/40 hover:shadow-[-1px_5px_3px] focus:shadow-[-1px_5px_3px] dark:focus:shadow-[-1px_5px_8px] hover:translate-y-[-6px] focus:translate-y-[-6px]" 
+        class="rounded-md sm:rounded-lg border-1 min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 relative group/title overflow-hidden shadow-bod/30 dark:shadow-main-800/40 hover:shadow-[-1px_5px_3px] focus:shadow-[-1px_5px_3px] dark:focus:shadow-[-1px_5px_8px] sm:hover:translate-y-[-6px] sm:focus:translate-y-[-6px]" 
         :class="[$attrs.class]"
         tabindex="0"
     >
@@ -35,11 +35,11 @@ const props = defineProps<{
             />
         </div>
         <section :class="[
-            'translate-y-[calc(100%-50px)] group-hover/title:translate-y-0 group-focus/title:translate-y-0 absolute bottom-0 p-0 transition-all group-hover/title:backdrop-blur-[3px] group-focus/title:backdrop-blur-[3px]! group-hover/title:bg-white/80! group-focus/title:bg-white/80! dark:group-hover/title:bg-bod/80! dark:group-focus/title:bg-bod/80!',
+            'sm:translate-y-[calc(100%-50px)] sm:group-hover/title:translate-y-0 sm:group-focus/title:translate-y-0 absolute bottom-0 p-0 transition-all group-hover/title:backdrop-blur-[3px] group-focus/title:backdrop-blur-[3px]! bg-white/80! dark:bg-bod/80! sm:bg-transparent! sm:group-hover/title:bg-white/80! sm:group-focus/title:bg-white/80! sm:dark:group-hover/title:bg-bod/80! sm:dark:group-focus/title:bg-bod/80!',
             
         ]">
             <div class="mx-4 z-10 transition-all">
-                <h3 class="text-[25px] font-bold my-2 border-l-4 border-main-50 pl-3 light:group-hover/title:text-main-400 dark:group-hover/title:text-main-100 transition-all duration-200 flex items-center mb-5 bottom-0 light:text-tod light:group-focus/title:text-tol">
+                <h3 class="text-[25px] font-bold my-2 border-l-4 border-main-50 pl-3 text-main-400 sm:light:group-hover/title:text-main-400 sm:dark:group-hover/title:text-main-100 transition-all duration-200 flex items-center mb-5 bottom-0 sm:light:text-tod sm:light:group-focus/title:text-tol">
                     <ClientIcon :icon="props.icon" class="text-main-100 light:group-hover/title:text-main-400 light:group-focus/title:text-main-400 mr-2" /> {{ props.title }}
                 </h3>
                 <p 

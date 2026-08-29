@@ -7,7 +7,7 @@
         "presentation": {
             "title": "Transformamos ideas en",
             "subtitle": "código de alto rendimiento.",
-            "description": "Construimos arquitecturas de software escalables, seguras y preparadas para el futuro. Elevamos tu visión empresarial con ingeniería y presición.",
+            "description": "Ingeniería de software escalable, segura y precisa para tu negocio.",
             "startProject": "Empieza tu proyecto",
             "portfolio": "Ver Portfolio"
         },
@@ -54,6 +54,7 @@
             "title": "Testimonios",
             "quote": "La confianza de nuestros clientes se construye con resultados que hablan por sí mismos y soluciones diseñadas para cumplir sus objetivos.",
             "description": "Cada proyecto refleja nuestro compromiso, generando experiencias satisfactorias que nuestros clientes reconocen y respaldan con sus propias palabras.",
+            "alt": "Logo de la empresa {name}.",
             "statements": {
                 "susana": "Innova reconstruyo nuestro backend heredado en 4 meses. La latencia se redujo en un 40% y la infraestructura es finalmente predecible.",
                 "luigi": "El rigor técnico de su equipo es incomparable. No solo escriben código, diseñan arquitecturas pensadas para durar.",

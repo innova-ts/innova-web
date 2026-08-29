@@ -35,7 +35,7 @@ import ArticleHomeServiceGridItem from './ArticleHomeServiceGridItem.vue';
             <ArticleHomeServiceGridItem 
                 img-url="/images/pages/home/presentation/infra"
                 :alt="$t('home.services.mainServices.infrastructure.title')"
-                fallback="jpg"
+                fallback="png"
                 icon="mdi:server"
                 :title="$t('home.services.mainServices.infrastructure.title')" 
                 :content="$t('home.services.mainServices.infrastructure.content')"

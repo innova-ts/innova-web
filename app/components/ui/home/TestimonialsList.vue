@@ -6,6 +6,10 @@ const config = useRuntimeConfig();
 
 const testimonialsCorps: string[] = config.public.testimonialsCorps.split(',').map((c: string) => c.trim());
 
+const renderTestimonialLogo = (companyName: string): string => {
+    return `images/pages/home/clients/${companyName.toLowerCase().split(' ').join('-').replaceAll('.', '').replaceAll('\'', '')}`;
+}
+
 </script>
 
 <template>
@@ -34,8 +38,9 @@ const testimonialsCorps: string[] = config.public.testimonialsCorps.split(',').m
                 >
                     <div class="absolute left-[-10px] h-[80px] w-[80px] text-main-100 p-2 rounded-full border bg-white border-zinc-200/60 dark:bg-zinc-800 dark:border-zinc-700/40">
                         <SmartImg 
-                            src="/images/pages/home/testimonials/burger"
-                            alt=""
+                            :src="renderTestimonialLogo(corp)"
+                            :alt="$t('home.clients.alt', { name: corp })"
+                            fallback="png"
                         />
                     </div>
                     <span class="mr-4 text-lg sm:text-sm">{{ corp }}</span>
