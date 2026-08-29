@@ -17,11 +17,11 @@ const toggleMenu = () => {
 
 <template>
     <header class="fixed top-0 left-0 z-50 h-web-ss w-full backdrop-blur-md bg-white/80 dark:bg-bod/80 border-b border-gray-200 dark:border-zinc-800 transition-colors duration-300">
-        <nav class="h-full container-site flex items-center justify-between">
+        <nav class="h-full container-site flex items-center justify-end md:justify-between">
             <div class="flex h-full z-60">
                 <ul :class="[
-                    'inset-y-0 left-0 z-40 flex flex-col md:flex-row h-screen md:h-full w-4/5 max-w-sm md:w-auto bg-white dark:bg-zinc-900 md:bg-transparent dark:md:bg-transparent p-0 md:p-0 pt-10 md:pt-0 gap-3 md:gap-2 border-r md:border-r-0 border-gray-200 dark:border-zinc-800 shadow-xl md:shadow-none transition-transform duration-300 md:transition-none md:translate-x-0 fixed md:relative', 
-                    isOpen ? 'translate-x-0' : '-translate-x-full'
+                    'inset-y-0 left-0 z-40 flex flex-col md:flex-row h-dvh md:h-full w-full md:w-auto bg-white dark:bg-zinc-900 md:bg-transparent dark:md:bg-transparent p-0 md:p-0 pt-10 md:pt-0 gap-3 md:gap-2 border-r md:border-r-0 border-gray-200 dark:border-zinc-800 shadow-xl md:shadow-none transition-transform duration-300 md:transition-none md:translate-y-0 fixed md:relative', 
+                    isOpen ? 'translate-y-0' : '-translate-y-full'
                 ]">
                     <li class="h-12 md:h-full">
                         <!-- Logo -->
@@ -45,7 +45,7 @@ const toggleMenu = () => {
                         <ColorModeSelector :auto-detect="true" />
                     </li>
                  </ul>
-                 <div class="flex-1 flex justify-start items-center md:hidden">
+                 <div class="flex-1 flex justify-end items-center md:hidden">
                     <button @click="toggleMenu" type="button"
                         class="flex flex-col justify-center items-center w-8 h-8 rounded-lg p-1 z-50 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
                         aria-label="Toggle menu">

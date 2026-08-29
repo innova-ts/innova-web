@@ -13,22 +13,22 @@ const props = defineProps<{
 </script>
 <template>
     <article 
-        class="rounded-md sm:rounded-lg border-1 min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 relative group/title overflow-hidden shadow-bod/30 dark:shadow-main-800/40 hover:shadow-[-1px_5px_3px] focus:shadow-[-1px_5px_3px] dark:focus:shadow-[-1px_5px_8px] sm:hover:translate-y-[-6px] sm:focus:translate-y-[-6px]" 
+        class="rounded-md sm:rounded-lg border min-h-[250px] bg-white dark:bg-zinc-800/35 border-gray-200/90 dark:border-tol/70 hover:border-main-50 transition-all duration-200 relative group/title overflow-hidden shadow-bod/30 dark:shadow-main-800/40 hover:shadow-[-1px_5px_3px] focus:shadow-[-1px_5px_3px] dark:focus:shadow-[-1px_5px_8px] sm:hover:translate-y-[-6px] sm:focus:translate-y-[-6px]" 
         :class="[$attrs.class]"
         tabindex="0"
     >
         <div 
             class="absolute z-0 inset-0 top-0 left-0 w-full"
             :class="[
-                'light:bg-gradient-to-b light:from-via-bol/10 light:via-bol/30 light:to-bol',
-                'dark:bg-gradient-to-b dark:from-transparent dark:via-bod/50 dark:to-bod',
+                'light:bg-linear-to-b light:from-via-bol/10 light:via-bol/30 light:to-bol',
+                'dark:bg-linear-to-b dark:from-transparent dark:via-bod/50 dark:to-bod',
             ]"
         >
             <SmartImg 
                 v-if="props.imgUrl"
                 :src="props.imgUrl"
                 :alt="props.alt ?? ''"
-                class="w-full h-full opacity-[85%] dark:opacity-30 group-hover/title:opacity-90 group-focus/title:opacity-90 dark:group-hover/title:opacity-40 dark:group-focus/title:opacity-40 object-cover scale-105 transition-all duration-700 ease-out group-hover/title:scale-110"
+                class="w-full h-full opacity-85 dark:opacity-70 group-hover/title:opacity-90 group-focus/title:opacity-90 dark:group-hover/title:80-40 dark:group-focus/title:opacity-80 object-cover scale-105 transition-all duration-700 ease-out group-hover/title:scale-110"
                 aria-hidden="true" 
                 loading="lazy" 
                 decoding="async" 

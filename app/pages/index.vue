@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 import { navigateTo, useRuntimeConfig } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
@@ -48,7 +49,13 @@ useSeo({
         </section>
 
         <!-- Services -->
-        <section class="min-h-[300px] bg-white dark:bg-main-900/4">
+        <section :class="[
+            'min-h-75 bg-white dark:bg-main-900/4', 
+            'bg-transparent',
+            'bg-fixed',
+            'bg-size-[150px_150px]',
+            'bg-center',
+            'bg-[linear-gradient(color-mix(in_oklab,var(--color-main-100)_40%,transparent)_1px,transparent_1px),linear-gradient(to_right,color-mix(in_oklab,var(--color-main-100)_40%,transparent)_1px,transparent_1px)]']">
             <div class="container-site py-10">
                 <HomeServicesGrid />
             </div>
