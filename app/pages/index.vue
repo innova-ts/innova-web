@@ -55,7 +55,7 @@ useSeo({
             'bg-fixed',
             'bg-size-[150px_150px]',
             'bg-center',
-            'bg-[linear-gradient(color-mix(in_oklab,var(--color-main-100)_40%,transparent)_1px,transparent_1px),linear-gradient(to_right,color-mix(in_oklab,var(--color-main-100)_40%,transparent)_1px,transparent_1px)]']">
+            'bg-[linear-gradient(color-mix(in_oklab,var(--color-main-100)_35%,transparent)_1px,transparent_1px),linear-gradient(to_right,color-mix(in_oklab,var(--color-main-100)_35%,transparent)_1px,transparent_1px)]']">
             <div class="container-site py-10">
                 <HomeServicesGrid />
             </div>
