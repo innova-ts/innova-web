@@ -1,14 +1,18 @@
 <script lang="ts" setup>
-import { navigateTo } from '#app';
+
+import { navigateTo, useRuntimeConfig } from '#app';
 import SmoothLiquid from '~/components/shared/ui/SmoothLiquid.vue';
 import HomeServicesGrid from '~/components/ui/home/HomeServicesGrid.vue';
-import Testimonial from '~/components/ui/home/Testimonial.vue';
-import WCUItem from '~/components/ui/home/WCUItem.vue';
 import Button from '~/components/web/forms/Button.vue';
 import { useSeo } from '~/composables/seo/useSeo';
 import { useI18n } from "vue-i18n";
+import ClientIcon from '~/components/shared/ui/ClientIcon.vue';
+import WCU from '~/components/ui/home/WCU.vue';
+import TestimonialsList from '~/components/ui/home/TestimonialsList.vue';
 
 const { t } = useI18n();
+
+const config = useRuntimeConfig();
 
 useSeo({
     title: t('home.seo.title'),
@@ -23,15 +27,20 @@ useSeo({
             <SmoothLiquid>
                 <div class="flex h-full">
                     <div class="m-auto container-site">
-                        <h1 class="text-4xl sm:text-5xl text-center font-bold">
-                            {{ $t('home.presentation.title') }}<br>
-                            <span class="text-main-200 dark:text-main-50">{{ $t('home.presentation.subtitle') }}</span>
-                        </h1>
+                        <h1 class="text-5xl sm:text-6xl text-center font-bold text-main-200 dark:text-main-50">{{ config.public.appName }}</h1>
+                        <h2 class="text-xl sm:text-3xl text-center font-bold w-full sm:w-[80%] md:w-[60%] lg:w-[40%] m-auto">
+                            {{ $t('home.presentation.title') }} {{ $t('home.presentation.subtitle') }}
+                        </h2>
                         <p class="m-auto text-md sm:text-xl text-center py-8 w-[80%] sm:w-[60%]">{{ $t('home.presentation.description') }}</p>
                         <div class="flex">
-                            <div class="m-auto flex gap-2">
-                                <Button size="md" @click="navigateTo('/contact')">{{ $t('home.presentation.startProject') }}</Button>
-                                <Button variant="outlined" size="md" class="dark:text-white" @click="navigateTo('/about#portfolio')">{{ $t('home.presentation.portfolio') }}</Button>
+                            <div class="m-auto flex flex-col sm:flex-row gap-2">
+                                <Button size="md" class="light:text-white font-[625]" @click="navigateTo('/contact')">
+                                    <span class="flex gap-1 items-center">
+                                        {{ $t('home.presentation.startProject') }}
+                                        <ClientIcon icon="maki:arrow" />
+                                    </span>
+                                </Button>
+                                <Button variant="outlined" size="md" class="dark:text-white font-[500]" @click="navigateTo('/about#portfolio')">{{ $t('home.presentation.portfolio') }}</Button>
                             </div>
                         </div>
                     </div>
@@ -40,74 +49,29 @@ useSeo({
         </section>
 
         <!-- Services -->
-        <section class="min-h-[300px] bg-main-900/3 dark:bg-main-900/4">
+        <section :class="[
+            'min-h-75 bg-white dark:bg-main-900/4', 
+            'bg-transparent',
+            'bg-fixed',
+            'bg-size-[150px_150px]',
+            'bg-center',
+            'bg-[linear-gradient(color-mix(in_oklab,var(--color-main-100)_35%,transparent)_1px,transparent_1px),linear-gradient(to_right,color-mix(in_oklab,var(--color-main-100)_35%,transparent)_1px,transparent_1px)]']">
             <div class="container-site py-10">
                 <HomeServicesGrid />
             </div>
         </section>
 
         <!-- Why choose us -->
-        <section>
-            <div class="container-site py-10 text-center relative">
-                <div class="mb-7">
-                    <h2 class="text-2xl font-bold">{{ $t('home.wcu.title') }}</h2>
-                    <h3 class="text-md dark:text-tod/70">{{ $t('home.wcu.description') }}</h3>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 relative">
-                    <div class="hidden sm:flex items-center justify-center absolute w-full top-6 ">
-                        <div 
-                            :class="[
-                                'h-[2px] z-[0] pointer-events-none w-[60%] m-auto', 
-                                'dark:bg-[linear-gradient(90deg,transparent_0%,color-mix(in_oklab,var(--color-main-100)_50%,transparent)_15%,transparent_40%,transparent_60%,color-mix(in_oklab,var(--color-main-100)_50%,transparent)_85%,transparent_100%)]',
-                                'light:bg-[linear-gradient(90deg,transparent_0%,var(--color-main-50)_15%,transparent_40%,transparent_60%,var(--color-main-50)_85%,transparent_100%)]'
-                            ]"
-                        ></div>
-
-                        
-                    </div>
-                    <div class="relative z-10">
-                        <WCUItem 
-                            title-key="home.wcu.items.innovation.title"
-                            description-key="home.wcu.items.innovation.description"
-                            icon="iconoir:light-bulb"
-                        />
-                    </div>
-                    <div class="relative z-10">
-                        <WCUItem 
-                            title-key="home.wcu.items.scalability.title"
-                            description-key="home.wcu.items.scalability.description"
-                            icon="material-symbols:layers"
-                        />
-                    </div>
-                    <div class="col-span-2 sm:col-span-1 relative z-10">
-                        <WCUItem 
-                            title-key="home.wcu.items.techSupport.title"
-                            description-key="home.wcu.items.techSupport.description"
-                            icon="material-symbols:support-agent-rounded"
-                        />
-                    </div>
-                </div>
+        <section class="relative z-10 bg-bod-soft/1 border-t-4 border-b border-main-900/10 dark:border-main-400 shadow-bod/7 dark:shadow-zinc-800 shadow-xl">
+            <div class="container-site py-0 sm:py-10 px-0! sm:px-4 text-center relative mt-10 sm:my-15">
+                <WCU />
             </div>
         </section>
 
         <!-- Clients -->
-        <section class="min-h-[300px] bg-zinc-50/90 dark:bg-bod-soft/30">
-            <div class="container-site py-10">
-                <div class="mb-7">
-                    <h2 class="text-2xl font-bold">{{ $t('home.clients.title') }}</h2>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Testimonial 
-                        name="Susana Horia"
-                        position="CTO. Fintech Solutions."
-                        :statement="$t('home.clients.statements.susana')"
-                    />
-                    <Testimonial 
-                        name="Luigi Mada"
-                        position="VP Engineering, Datacorp."
-                        :statement="$t('home.clients.statements.luigi')"                    
-                    />
-                </div>
+        <section class="relative bg-gradient-to-b from-zinc-50 via-zinc-100/50 to-zinc-50 py-16 dark:from-bod-soft/20 dark:via-bod-soft/40 dark:to-bod-soft/20 sm:py-24">
+            <div class="container-site max-w-6xl relative overflow-x-clip">
+                <TestimonialsList />
             </div>
         </section>
     </div>

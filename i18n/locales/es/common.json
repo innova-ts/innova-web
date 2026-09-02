@@ -1,19 +1,28 @@
 {
     "common": {
         "brand": {
-            "slogan": "Construido para el futuro del código."
+            "slogan": "Construido para el futuro del código.",
+            "logoAlt": "Logo de {appName}"
         },
         "footer": {
             "copyRightMessage": "© {year} {appName}.",
             "titles": {
                 "services": "Servicios",
                 "legal": "Legal"
-            }
+            },
+            "mailUs": "Envianos un mensaje a: ",
+            "socialNetworks": "O visita nuestras redes sociales: "
         },
         "theme": {
-            "system": "Sistema",
-            "light": "Claro",
-            "dark": "Oscuro"
+            "ariaLabel": {
+                "dark": "Cambiar a modo claro",
+                "light": "Cambiar a modo oscuro"
+            },
+            "modes": {
+                "system": "Sistema",
+                "light": "Claro",
+                "dark": "Oscuro"
+            }
         }
     }
 }

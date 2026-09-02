@@ -1,19 +1,28 @@
 {
     "common": {
         "brand": {
-            "slogan": "Build for the future of code."
+            "slogan": "Build for the future of code.",
+            "logoAlt": "{appName}'s logo"
         },
         "footer": {
             "copyRightMessage": "© {year} {appName}.",
             "titles": {
                 "services": "Services",
                 "legal": "Legal"
-            }
+            },
+            "mailUs": "Send us a message at: ",
+            "socialNetworks": "Or visit our social networks: "
         },
         "theme": {
-            "system": "System",
-            "light": "Light",
-            "dark": "Dark"
+            "ariaLabel": {
+                "dark": "Switch to light mode",
+                "light": "Switch to dark mode"
+            },
+            "modes": {
+                "system": "System",
+                "light": "Light",
+                "dark": "Dark"
+            }
         }
     }
 }
