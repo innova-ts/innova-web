@@ -52,7 +52,7 @@ const InterestLinks = reactive([
                             </span>
                         </div>
                         <span class="text-lg font-semibold tracking-tight">
-                            <span class="text-main-100 font-normal">{{ config.public.appName }}</span>
+                            <span class="text-main-100 font-bold">{{ config.public.appName }}</span>
                         </span>
                     </div>
                     <p class="text-sm text-tol/70 dark:text-tod/70 leading-relaxed max-w-sm">
@@ -101,7 +101,7 @@ const InterestLinks = reactive([
                 <div class="space-y-4 col-span-1">
                     <ul class="space-y-2 w-full decoration-violet-700-">
                         <li>
-                            <h2 class="text-md font-medium text-main-200">{{ $t('common.footer.titles.services') }}</h2>
+                            <h2 class="text-md font-bold text-main-200">{{ $t('common.footer.titles.services') }}</h2>
                         </li>
                         <li v-for="route, routeIndex in routes" :key="`route-${routeIndex}`">
                             <NuxtLinkLocale 
@@ -116,7 +116,7 @@ const InterestLinks = reactive([
                 <div class="space-y-4 col-span-1">
                     <ul class="space-y-2 w-full decoration-violet-700-">
                         <li>
-                            <h2 class="text-md font-medium text-main-200">{{ $t('common.footer.titles.legal') }}</h2>
+                            <h2 class="text-md font-bold text-main-200">{{ $t('common.footer.titles.legal') }}</h2>
                         </li>
                         <li v-for="il, ilIndex in InterestLinks" :key="`policy-${ilIndex}`">
                             <NuxtLinkLocale 
