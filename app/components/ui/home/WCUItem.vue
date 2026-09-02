@@ -30,7 +30,7 @@ defineProps<{
 
             <!-- Content -->
             <div class="mx-auto mt-5 max-w-sm px-4 sm:px-6">
-                <h3 class="text-base font-semibold tracking-tight text-zinc-900 dark:text-white">
+                <h3 class="text-base font-semibold tracking-tight text-zinc-900 dark:text-white text-[17px]">
                     {{ $t(titleKey) }}
                 </h3>
                 <p class="mt-2 text-md leading-relaxed text-tol/70 dark:text-tod/70">
