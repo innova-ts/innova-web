@@ -50,7 +50,7 @@ const { skills, profileURL, linkedinLink, githubLink } = useTeamMember(props.mem
             <hr class="border-gray-400/20 my-2">
             <div class="flex gap-2 justify-end">
                 <a 
-                    v-if="linkedinLink"
+                    v-if="(linkedinLink)"
                     :href="linkedinLink" 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -60,7 +60,7 @@ const { skills, profileURL, linkedinLink, githubLink } = useTeamMember(props.mem
                     <ClientIcon icon="akar-icons:linkedin-box-fill" class="w-5 h-5 transition-colors group-hover/member-link:text-main-200 group-active/member-link:text-main-200 dark:group-hover/member-link:text-main-50 dark:group-active/member-link:text-main-50" />
                 </a>
                 <a 
-                    v-if="githubLink"
+                    v-if="(githubLink)"
                     :href="githubLink" 
                     target="_blank"
                     rel="noopener noreferrer"

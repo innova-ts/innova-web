@@ -105,13 +105,13 @@ export const useTeamMember = (member:TeamMemberContract) => {
     })
 
     const linkedinLink = computed((): string|null => {
-        if (member.linkedinUserHash === '') {
+        if (member.linkedinUserHash === undefined) {
             return null
         }
         return `https://www.linkedin.com/in/${member.linkedinUserHash}`
     })
     const githubLink = computed((): string | null => {
-        if (member.githubUserHash === '') {
+        if (member.githubUserHash === undefined) {
             return null;
         }
         return `https://github.com/${member.githubUserHash}`
