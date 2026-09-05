@@ -1,0 +1,12 @@
+{
+    "about": {
+        "seo": {
+            "title": "Acerca de | Innova",
+            "description": "Conoce más sobre Innova, líder en soluciones tecnológicas. Descubre nuestra historia, equipo y valores."
+        },
+        "whoAreWe": {
+            "title": "Sobre {name}",
+            "description": "..."
+        }
+    }
+}
