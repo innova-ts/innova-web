@@ -57,7 +57,7 @@ As part of the branding mark, You have to update some data as logos, colors, fon
     ```
     > 🚩 **RECOMENDATION**: Do not add or remove any color from the current definition, just replace the current values with the new ones as you need. 
     
-    > 🚩 **RECOMENDATION**: Do not replace the current values with random colors, the current colors are calculated for a reason. Instead, you can extract your branding colors from your logo using some specific tools like [Adobe Color](https://color.adobe.com/es/create/image), or some AI platform such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/app), etc, (Anyway, you should consider get support from an experienced designer).
+    > 🚩 **RECOMENDATION**: Do not replace the current values with random colors, all of these have been calculated for a reason. Instead, you can extract your branding colors from your logo using some specific tools like [Adobe Color](https://color.adobe.com/es/create/image), or some AI platform such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/app), etc, (Anyway, you should consider get support from an experienced designer).
     
     
 
