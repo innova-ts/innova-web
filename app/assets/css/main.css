@@ -23,6 +23,14 @@
     --color-main-800: #496d42;
     --color-main-900: #466c51;
     --color-main-950: #476C5E;
+
+    --color-branding-50: #083643;
+    --color-branding-100: #476C5E;
+    --color-branding-200: #B8ECD7;
+    --color-branding-300: #F2F2F2;
+    --color-branding-400: #E9ECF5;
+    --color-branding-500: #CEF09D;
+    --color-branding-600: #B1E001;
 }
 
 .container-site {
@@ -54,3 +62,23 @@
 *:focus {
     outline: solid 0.5px var(--color-main-100);
 }
+
+/* Do not remove next lines, used for verification purposes */
+/* .color-main-50 { color:#B1E001; }
+.color-main-100 { color:#a2cd03; }
+.color-main-200 { color:#93ba05; }
+.color-main-300 { color:#84a80a; }
+.color-main-400 { color:#75960e; }
+.color-main-500 { color:#678413; }
+.color-main-600 { color:#5c7c22; }
+.color-main-700 { color:#527533; }
+.color-main-800 { color:#496d42; }
+.color-main-900 { color:#466c51; }
+.color-main-950 { color:#476C5E; }
+.branding { color: #083643 }
+.branding { color: #476C5E }
+.branding { color: #B8ECD7 }
+.branding { color: #F2F2F2 }
+.branding { color: #E9ECF5 }
+.branding { color: #CEF09D }
+.branding { color: #B1E001 } */

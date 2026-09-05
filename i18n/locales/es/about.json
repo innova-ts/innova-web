@@ -4,9 +4,74 @@
             "title": "Acerca de | Innova",
             "description": "Conoce más sobre Innova, líder en soluciones tecnológicas. Descubre nuestra historia, equipo y valores."
         },
-        "whoAreWe": {
-            "title": "Sobre {name}",
-            "description": "..."
+        "hero": {
+            "ourIdentity": "Nuestra identidad",
+            "title": "Ingeniería con propósito",
+            "description": "Transformar negocios a través de la tecnología. Convertimos conocimiento, innovación y tecnología en oportunidades que permiten a las empresas operar mejor, crecer con confianza y alcanzar su máximo potencial.",
+            "mission": "Misión",
+            "vision": "Visión",
+            "missionDesc": "Impulsamos la transformación empresarial mediante soluciones tecnológicas de valor.",
+            "visionDesc": "Socio tecnológico estratégico para empresas que buscan crecer e innovar."
+        },
+        "team": {
+            "header": {
+                "label": "Nuestro equipo // talento humano",
+                "title": "Arquitectos del sistema",
+                "span": "Enfoque y liderazgo profesional"
+            },
+            "labelLinks": {
+                "github": "Perfil de Github",
+                "linkedin": "Perfil de Linkedin"
+            },
+            "content": {
+                "specialization": "Especialización",
+                "linkedin": "Ver perfil de Linkedin",
+                "github": "Ver perfil de Github"
+            },
+            "management": {
+                "title": "Gestión",
+                "total": "2",
+                "items": [
+                    {
+                        "name": "José L.",
+                        "position": "Líder de proyecto",
+                        "skills": "Gestión de proyectos,Estratégia,Coordinación de equipos,Gestión de clientes",
+                        "summary": "Lidera los proyectos, coordina equipos y clientes, y supervisa la planificación, ejecución y cumplimiento de objetivos."
+                    },
+                    {
+                        "name": "Victor V.",
+                        "position": "Líder de equipo",
+                        "skills": "Liderazgo técnico,Arquitectura de software,Desarrollo,Metodologías ágiles",
+                        "summary": "Lidera al equipo técnico, supervisa el desarrollo y asegura la calidad, eficiencia y cumplimiento de los estándares tecnológicos."
+                    }
+                ]
+            },
+            "projects": {
+                "title": "Proyectos",
+                "total": "5",
+                "items": [
+                    {
+                        "name": "Proyecto 1",
+                        "image": "/img/projects/proyecto-1.jpg"
+                    },
+                    {
+                        "name": "Proyecto 2",
+                        "image": "/img/projects/proyecto-2.jpg"
+                    },
+                    {
+                        "name": "Proyecto 3",
+                        "image": "/img/projects/proyecto-3.jpg"
+                    },
+                    {
+                        "name": "Proyecto 4",
+                        "image": "/img/projects/proyecto-4.jpg"
+                    },
+                    {
+                        "name": "Proyecto 5",
+                        "image": "/img/projects/proyecto-5.jpg"
+                    }
+                ]
+            }
         }
     }
 }

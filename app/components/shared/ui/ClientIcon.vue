@@ -11,7 +11,7 @@ const props = defineProps<{
         <Icon :icon="props.icon" :class="$attrs.class" />
         <template #fallback>
             <span
-                :class="[$attrs.class, 'inline-block opacity-0']"
+                :class="['inline-block opacity-50 bg-bod/15 dark:bg-bol/50 w-6 rounded-sm aspect-square', $attrs.class]"
                 aria-hidden="true"
             ></span>
         </template>

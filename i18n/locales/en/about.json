@@ -4,9 +4,48 @@
             "title": "About Us | Innova",
             "description": "Discover more about Innova, leader in technological solutions. Learn about our history, team, and values."
         },
-        "whoAreWe": {
-            "title": "About {name}",
-            "description": "..."
+        "hero": {
+            "ourIdentity": "Our Identity",
+            "title": "Engineering with purpose",
+            "description": "Transforming businesses through technology. We turn knowledge, innovation, and technology into opportunities that allow companies to operate better, grow with confidence, and reach their full potential.",
+            "mission": "Mission",
+            "vision": "Vision",
+            "missionDesc": "Driving business transformation through valuable technological solutions.",
+            "visionDesc": "Strategic technology partner for companies seeking to grow and innovate."
+        },
+        "team": {
+            "header": {
+                "label": "Our team // human talent",
+                "title": "System architects",
+                "span": "Professional focus and leadership"
+            },
+            "labelLinks": {
+                "github": "Github Profile",
+                "linkedin": "Linkedin Profile"
+            },
+            "content": {
+                "specialization": "Specialization",
+                "linkedin": "View LinkedIn Profile",
+                "github": "View Github Profile"
+            },
+            "management": {
+                "title": "Management",
+                "total": "2",
+                "items": [
+                    {
+                        "name": "José L.",
+                        "position": "Project Leader",
+                        "skills": "Project management,Strategy,Team coordination,Client management",
+                        "summary": "Leads projects, coordinates teams and clients, and supervises the planning, execution, and achievement of objectives."
+                    },
+                    {
+                        "name": "Victor V.",
+                        "position": "Team Leader",
+                        "skills": "Technical leadership,Software architecture,Development,Agile methodologies",
+                        "summary": "Leads the technical team, supervises development, and ensures quality, efficiency, and compliance with technological standards."
+                    }
+                ]
+            }
         }
     }
 }
