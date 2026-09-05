@@ -26,7 +26,10 @@
             "content": {
                 "specialization": "Specialization",
                 "linkedin": "View LinkedIn Profile",
-                "github": "View Github Profile"
+                "github": "View Github Profile",
+                "management":"Management",
+                "projects": "Projects",
+                "administration": "Administration"
             },
             "management": {
                 "title": "Management",

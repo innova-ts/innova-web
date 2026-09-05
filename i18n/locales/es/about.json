@@ -26,7 +26,10 @@
             "content": {
                 "specialization": "Especialización",
                 "linkedin": "Ver perfil de Linkedin",
-                "github": "Ver perfil de Github"
+                "github": "Ver perfil de Github",
+                "management":"Gestión",
+                "projects": "Proyectos",
+                "administration": "Administración"
             },
             "management": {
                 "title": "Gestión",

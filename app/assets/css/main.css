@@ -34,7 +34,7 @@
 }
 
 .container-site {
-    @apply max-w-7xl px-4 mx-auto w-full;
+    @apply max-w-[85rem] px-4 mx-auto w-full;
 }
 
 .page-enter-active, .page-leave-active {

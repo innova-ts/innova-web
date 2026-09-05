@@ -20,12 +20,12 @@ const props = withDefaults(defineProps<{
     </div>
     <div 
         v-if="props.title !== '' || props.span !== ''"
-        class="flex w-full justify-between"
+        class="block md:flex w-full justify-between"
     >
-        <h2 v-if="props.title !== ''" class="font-bold text-3xl">
+        <h2 v-if="props.title !== ''" class="w-full md:w-auto font-bold text-3xl">
             {{ props.title }}
         </h2>
-        <span v-if="props.span !== ''" class="flex items-center gap-1">
+        <span v-if="props.span !== ''" class="flex items-center gap-1 text-right">
             <span class="inline-block w-3 h-3 bg-main-200 rounded-full" aria-hidden="true"></span> 
             <span class="text-main-200 uppercase text-[12px]"> {{ props.span }}</span>
         </span>
