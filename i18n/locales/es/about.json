@@ -75,6 +75,24 @@
                     }
                 ]
             }
+        },
+        "metrics": {
+            "projects": {
+                "name": "Proyectos exitosos",
+                "description": "Despliegues completados"
+            },
+            "countries": {
+                "name": "Paises alcanzados",
+                "description": "Presencia internacional"
+            },
+            "uptime": {
+                "name": "Disponibilidad garantizada",
+                "description": "Alta disponibilidad SLA"
+            },
+            "support": {
+                "name": "Soporte continuo",
+                "description": "Operatividad ininterrumpida"
+            }
         }
     }
 }

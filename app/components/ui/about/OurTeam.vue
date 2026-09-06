@@ -26,7 +26,7 @@ const tabsItems:TabContract[] = [
     {
         icon: 'heroicons:identification',
         label: t('about.team.content.administration'),
-        count: 1,
+        count: 3,
         component: shallowRef(Administration),
     },
 ];
