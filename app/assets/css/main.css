@@ -9,6 +9,8 @@
     --color-bod-soft: var(--color-zinc-800);
     --color-tod: var(--color-white);
     --color-bol: rgb(253, 252, 253);
+    --color-bol-1: #eae9ed;
+    --color-bod-1: #151e23;
     --color-tol: var(--color-zinc-600);
     --color-text-selected: var(--color-white);
 
@@ -64,7 +66,7 @@
 }
 
 /* Do not remove next lines, used for verification purposes */
-/* .color-main-50 { color:#B1E001; }
+.color-main-50 { color:#B1E001; }
 .color-main-100 { color:#a2cd03; }
 .color-main-200 { color:#93ba05; }
 .color-main-300 { color:#84a80a; }
@@ -81,4 +83,4 @@
 .branding { color: #F2F2F2 }
 .branding { color: #E9ECF5 }
 .branding { color: #CEF09D }
-.branding { color: #B1E001 } */
+.branding { color: #B1E001 }

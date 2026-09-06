@@ -15,17 +15,18 @@ useSeo({
 
 </script>
 <template>
-    <div>
+    <div class="light:bg-bod/3">
         <!-- Hero -->
         <AboutHero />
 
        <!-- Our team -->
+        
         <div class="container-site py-13">
             <OurTeam />
         </div>
 
         <!-- Metrics -->
-        <div class="relative bg-zinc-300/35 lg:py-30 [clip-path:polygon(0_4vw,100%_0,100%_calc(100%-4vw),0_100%)] dark:bg-branding-50/20">
+        <div class="relative bg-bol-1 lg:py-20 dark:bg-bod-1 z-10">
             <div 
                 class="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(-45deg,#a1a1aa0f,#a1a1aa0f_2px,transparent_2px,transparent_16px)] dark:bg-[repeating-linear-gradient(-45deg,#ffffff05,#ffffff05_2px,transparent_2px,transparent_16px)]"
             />
@@ -35,10 +36,8 @@ useSeo({
         </div>
 
         <!--  Elementary values -->
-        <div class="py-13">
-            <div class="container-site">
-                <ValuesGrid />
-            </div>
+        <div class="relative overflow-hidden bg-white/60 dark:bg-transparent backdrop-blur-3xl">
+            <ValuesGrid />
         </div>
 
         <!-- Policies -->

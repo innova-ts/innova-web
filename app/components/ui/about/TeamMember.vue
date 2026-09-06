@@ -15,7 +15,7 @@ const { skills, profileURL, linkedinLink, githubLink } = useTeamMember(props.mem
 </script>
 <template>
     <section :class="[
-        'border border-gray-400/20 rounded-lg overflow-hidden group/card hover:border-main-50 active:border-main-50 transition-all duration-300',
+        'border border-gray-400/20 rounded-lg overflow-hidden group/card hover:border-main-50 active:border-main-50 transition-all duration-300 light:bg-bol dark:bg-bol/2',
         variant === 'standar' ? 'flex flex-col md:flex-row' : 'img-first'
     ]">
         <div :class="['w-full', (variant === 'standar') && 'md:w-2/7']">
