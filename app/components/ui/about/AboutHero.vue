@@ -13,7 +13,7 @@ useSeo({
 </script>
 
 <template>
-    <div class="py-10 md:py-20 border-b border-b-gray-400/20 flex items-center bg-[radial-gradient(circle_at_top_right,rgba(71,108,94,0.8)_0%,rgba(8,54,67,1)_70%)]">
+    <div class="py-10 md:py-20 border-b border-b-gray-400/20 flex items-center bg-[radial-gradient(circle_at_top_right,var(--color-branding-100)_0%,var(--color-branding-50)_70%)]">
         <div class="container-site">
             <div class="w-full flex flex-col-reverse md:flex-row gap-5">
                 <div class="w-full md:w-1/2 flex flex-col gap-5 text-left">
