@@ -5,6 +5,7 @@ import AboutHero from '~/components/ui/about/AboutHero.vue';
 import OurTeam from '~/components/ui/about/OurTeam.vue';
 import Counts from '~/components/ui/about/metrics/Counts.vue';
 import ValuesGrid from '~/components/ui/about/values/ValuesGrid.vue';
+import PoliciesSection from '~/components/ui/about/policies/PoliciesSection.vue';
 
 const { t } = useI18n();
 
@@ -41,6 +42,8 @@ useSeo({
         </div>
 
         <!-- Policies -->
-        <div></div>
+        <div class="py-12 bg-white/80 dark:bg-bol/3 border-t-5 light:border-gray-100 dark:border-bol/10">
+            <PoliciesSection />
+        </div>
     </div>
 </template>
