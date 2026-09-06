@@ -11,7 +11,7 @@ const props = defineProps<{
     <!-- radial-gradient(circle, color-mix(in oklab, var(--color-main-100) 25%, transparent) 0%, transparent 70%), -->
     <div
         :class="[
-            'group/value-item relative h-full overflow-hidden rounded-2xl border p-6',
+            'group/value-item relative h-full overflow-hidden rounded-2xl border p-4',
             'border-main-100/20 bg-white/60',
             'transition-all duration-300 ease-out',
             'hover:-translate-y-1 hover:border-main-100/50 hover:shadow-xl hover:shadow-main-100/5',
@@ -33,7 +33,7 @@ const props = defineProps<{
 
             <div class="m-auto">
                 <!-- Icon -->
-                <div class="h-9 w-9 shrink-0 m-auto flex h-20 w-20
+                <div class="shrink-0 m-auto flex h-15 w-15
                         items-center justify-center
                         rounded-2xl
                         border border-bod-soft/20
@@ -57,15 +57,12 @@ const props = defineProps<{
 
                         <ClientIcon
                             :icon="props.icon"
-                            class="text-5xl"
+                            class="text-3xl"
                         />
                 </div>
-        
-        
-    
 
                 <!-- Content -->
-                <div class="mt-5">
+                <div class="mt-1.5">
                     <h4
                         class="
                             text-lg font-semibold tracking-tight
@@ -81,7 +78,7 @@ const props = defineProps<{
 
                     <p
                         class="
-                            mt-2 text-sm leading-relaxed
+                            mt-1 text-xs leading-relaxed
                             text-tol/60
                             dark:text-tod/60
                         "
