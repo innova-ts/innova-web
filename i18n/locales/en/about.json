@@ -106,6 +106,23 @@
                     "description": "Constant evolution of methodologies, architectures and technical skills."
                 }
             }
+        },
+        "policies": {
+            "header": {
+                "label": "Legal directory",
+                "title": "Operational documentation"
+            },
+            "content": {
+                "description": "Access our legal frameworks, privacy policies, and operational guidelines."
+            },
+            "list": {
+                "privacyPolicy": "Privacy policy",
+                "dataTraining": "Data traing",
+                "dataSecurity": "Data Security",
+                "qualityPolicy": "Quality policy",
+                "websiteUsageTerms": "Website Usage Terms",
+                "termsConditions": "Terms & Conditions"
+            }
         }
     }
 }

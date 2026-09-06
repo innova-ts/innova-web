@@ -34,7 +34,7 @@ import ValueItem from './ValueItem.vue';
         class="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-main-100/30 to-transparent dark:via-main-50/10"
         aria-hidden="true"
     />
-    <div class="relative container-site py-16 lg:py-20">
+    <div class="relative container-site py-16 lg:py-12">
         <SimpleSectionHeader
             :label="$t('about.values.label')"
             :title="$t('about.values.title')"
