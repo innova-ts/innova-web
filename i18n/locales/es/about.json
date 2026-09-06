@@ -93,6 +93,45 @@
                 "name": "Soporte continuo",
                 "description": "Operatividad ininterrumpida"
             }
+        },
+        "values": {
+            "label": "Protocolos axiomáticos",
+            "title": "Nuestros valores fundamentales",
+            "span": "Principios que nos guian",
+            "items": {
+                "innovation": {
+                    "title": "Inovación",
+                    "description": "Exploramos tecnologías emergentes para crear soluciones transformadoras que anticipan el futuro."
+                },
+                "quality": {
+                    "title": "Calidad",
+                    "description": "Estándares rigurosos de ingeniería y código limpio en cada entrega técnica."
+                },
+                "transparency": {
+                    "title": "Transparencia",
+                    "description": "Comunicación honesta, trazabilidad total y claridad operativa en cada fase."
+                },
+                "teamWork": {
+                    "title": "Trabajo en equipo",
+                    "description": "Sinergia multidisciplinaria impulsada por la colaboración y el talento compartido."
+                },
+                "responsibility": {
+                    "title": "Responsabilidad",
+                    "description": "Compromiso ético y cumplimiento riguroso con cada proyecto y cliente."
+                },
+                "compromise": {
+                    "title": "Compromiso",
+                    "description": "Dedicación constante hacia el éxito, la seguridad y los objetivos de nuestros socios."
+                },
+                "clientsOrientation": {
+                    "title": "Orientación al cliente",
+                    "description": "Soluciones a medida diseñadas para potenciar el crecimiento real de cada negocio."
+                },
+                "continousEnhancement": {
+                    "title": "Mejora continua",
+                    "description": "Evolución constante de metodologías, arquitecturas y habilidades técnicas."
+                }
+            }
         }
     }
 }

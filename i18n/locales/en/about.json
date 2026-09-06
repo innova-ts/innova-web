@@ -67,6 +67,45 @@
                 "name": "Continuous support",
                 "description": "Uninterrupted operations"
             }
+        },
+        "values": {
+            "label": "Axiomatic protocols",
+            "title": "Our elementary values",
+            "span": "The foundations of our work",
+            "items": {
+                "innovation": {
+                    "title": "Innovation",
+                    "description": "We explore emerging technologies to create transformative solutions that anticipate the future."
+                },
+                "quality": {
+                    "title": "Quality",
+                    "description": "Rigorous engineering standards and clean code in every technical delivery."
+                },
+                "transparency": {
+                    "title": "Transparency",
+                    "description": "Honest communication, full traceability, and operational clarity in every phase."
+                },
+                "teamWork": {
+                    "title": "Teamwork",
+                    "description": "Multidisciplinary synergy driven by collaboration and shared talent."
+                },
+                "responsibility": {
+                    "title": "Responsibility",
+                    "description": "Ethical commitment and strict compliance with every project and client."
+                },
+                "compromise": {
+                    "title": "Commitment",
+                    "description": "Dedication to success, security and goals of our partners."
+                },
+                "clientsOrientation": {
+                    "title": "Client orientation",
+                    "description": "Custom solutions designed to enhance the real growth of each business."
+                },
+                "continousEnhancement": {
+                    "title": "Continuous enhancement",
+                    "description": "Constant evolution of methodologies, architectures and technical skills."
+                }
+            }
         }
     }
 }

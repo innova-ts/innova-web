@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import AboutHero from '~/components/ui/about/AboutHero.vue';
 import OurTeam from '~/components/ui/about/OurTeam.vue';
 import Counts from '~/components/ui/about/metrics/Counts.vue';
+import ValuesGrid from '~/components/ui/about/values/ValuesGrid.vue';
 
 const { t } = useI18n();
 
@@ -33,12 +34,12 @@ useSeo({
             </div>
         </div>
 
-        <!-- <div class="container-site">
-                <Counts />
-            </div> -->
-
-        <!--  Quantitative data -->
-        <div></div>
+        <!--  Elementary values -->
+        <div class="py-13">
+            <div class="container-site">
+                <ValuesGrid />
+            </div>
+        </div>
 
         <!-- Policies -->
         <div></div>
