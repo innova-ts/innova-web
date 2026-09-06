@@ -19,13 +19,13 @@ const props = defineProps<{
             'dark:hover:border-main-50/40 dark:hover:shadow-main-50/10',
 
             // Light gradient
-            'bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--color-branding-500)_30%,transparent),transparent_65%)]',
+            'bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--color-branding-500)_30%,transparent),color-mix(in_oklab,var(--color-zinc-400)_5%,transparent))]',
 
             // Dark gradient
             'dark:bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--color-main-50)_10%,transparent),transparent_65%)]',
 
             // Hover gradients
-            'hover:bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--color-branding-200)_50%,transparent),transparent_65%)]',
+            'hover:bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--color-branding-500)_20%,transparent),transparent_65%)]',
             'dark:hover:bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--color-main-50)_20%,transparent),transparent_65%)]',
         ]"
     >
@@ -44,7 +44,7 @@ const props = defineProps<{
                         transition-all duration-300 ease-out
                         group-hover/value-item:-translate-y-1
                         group-hover/value-item:border-main-100/50
-                        group-hover/value-item:bg-main-50/20
+                        group-hover/value-item:bg-zinc-100/10
                         group-hover/value-item:text-main-100
                         group-hover/value-item:shadow-lg
                         group-hover/value-item:shadow-main-100/10
