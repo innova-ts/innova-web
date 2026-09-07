@@ -1,7 +1,6 @@
 import { computed, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
-
-
+import { useFirstResource, useResourcesCollection } from './functionals/useDynamicContent';
 
 export type TeamMemberContract = {
     name: string
@@ -123,4 +122,14 @@ export const useTeamMember = (member:TeamMemberContract) => {
         linkedinLink,
         githubLink
     }
+};
+
+export const usePolicies = () => {
+    const { getResourceCollection } = useResourcesCollection('policies-list', 'policies');
+    return { getResourceCollection };
+};
+
+export const usePolicy = () => {
+    const { getResource } = useFirstResource('policy-resource', 'policies');
+    return { getResource }
 };

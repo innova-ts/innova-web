@@ -7,9 +7,11 @@ const props = withDefaults(defineProps<{
     label: string,
     title?: string,
     span?: string,
+    useH1?: boolean
 }>(), {
     title: '',
-    span: ''
+    span: '',
+    useH1: false
 })
 
 </script>
@@ -22,9 +24,14 @@ const props = withDefaults(defineProps<{
         v-if="props.title !== '' || props.span !== ''"
         class="block md:flex w-full justify-between pb-5 border-b border-b-bod/10 dark:border-b-bol/10"
     >
-        <h2 v-if="props.title !== ''" class="w-full md:w-auto font-bold text-3xl">
-            {{ props.title }}
-        </h2>
+        <template v-if="props.title !== ''">
+            <h1 v-if="props.useH1" class="w-full md:w-auto font-bold text-3xl">
+                {{ props.title }}
+            </h1>
+            <h2 v-else class="w-full md:w-auto font-bold text-3xl">
+                {{ props.title }}
+            </h2>
+        </template>
         <span v-if="props.span !== ''" class="flex items-center gap-2 text-right mt-0 sm:mt-3">
             <span class="inline-block w-2 h-2 bg-main-200 rounded-full animate-pulse shadow-lg shadow-main-200/50" aria-hidden="true"></span> 
             <span class="text-main-200 uppercase text-[12px]">{{ props.span }}</span>
