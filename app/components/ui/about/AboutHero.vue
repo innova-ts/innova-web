@@ -4,17 +4,13 @@ import CompanyVM from './CompanyVM.vue';
 import { useSeo } from '~/composables/seo/useSeo.ts';
 import { useI18n } from "vue-i18n";
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
-import { useAsyncData } from '#app';
-import { queryCollection } from '@nuxt/content';
 
 const { t } = useI18n();
+
 useSeo({
     title: t('about.seo.title'),
     description: t('about.seo.description')
 })
-
-const { data } = await useAsyncData('policies', () => queryCollection('policies').all())
-console.log(data.value);
 
 </script>
 

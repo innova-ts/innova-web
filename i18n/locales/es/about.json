@@ -139,15 +139,8 @@
                 "title": "Documentación operativa"
             },
             "content": {
-                "description": "Acceda a nuestros marcos legales, políticas de privacidad y directrices operativas del sistema."
-            },
-            "list": {
-                "privacyPolicy": "Política de privacidad",
-                "dataTraining": "Tratamiento de datos",
-                "dataSecurity": "Seguridad de la información",
-                "qualityPolicy": "Política de calidad",
-                "websiteUsageTerms": "Uso del sitio web",
-                "termsConditions": "Términos y condiciones"
+                "description": "Acceda a nuestros marcos legales, políticas de privacidad y directrices operativas del sistema.",
+                "updatedAt": "Última actualización: {date}"
             }
         }
     }

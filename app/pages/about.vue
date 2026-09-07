@@ -21,7 +21,6 @@ useSeo({
         <AboutHero />
 
        <!-- Our team -->
-        
         <div class="container-site py-13">
             <OurTeam />
         </div>
