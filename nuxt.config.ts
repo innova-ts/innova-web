@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     scan: false
   },
 
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/i18n', '@nuxt/content'],
   i18n: localeI18nOptions as any,
 
   colorMode: {
