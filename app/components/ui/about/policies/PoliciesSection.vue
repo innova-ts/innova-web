@@ -33,7 +33,7 @@ const { data:policies } = await getResourceCollection();
                             'active:bg-linear-to-r active:from-main-50/5 active:to-transparent',
                             'focus:bg-linear-to-r focus:from-main-50/5 active:to-transparent',
                             'relative before before:content-[\'\'] before:absolute before:-left-0.5 before:top-[50%] before:w-0.5 before:bg-main-50 before:h-0',
-                            'hover:before:h-full hover:before:top-0 before:transition-all',
+                            'hover:before:h-full hover:before:top-0 before:transition-all before:duration-300',
                         ]"
                     >
                         <span class="text-tol/90 dark:text-tod/70">

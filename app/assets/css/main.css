@@ -4,6 +4,7 @@
 @custom-variant light (&:where(.light, .light *));
 
 @theme {
+    --text-md: 0.9375rem;
     --spacing-web-ss: 55px;
     --color-bod: var(--color-zinc-900);
     --color-bod-soft: var(--color-zinc-800);

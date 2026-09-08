@@ -24,7 +24,7 @@ defineProps<{
             <p class="mt-1 font-semibold text-slate-800 dark:text-slate-100">
                 {{ name }}
             </p>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+            <p class="text-md text-slate-500 dark:text-slate-400 mt-0.5">
                 {{ description }}
             </p>
         </div>

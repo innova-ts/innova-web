@@ -170,7 +170,7 @@ const colors = (accentMap[props.accent] || accentMap.lime) as AccentMapContract;
                     >
                         {{ props.title }}
                     </h4>
-                    <p class="mx-auto max-w-64 mt-1.5 text-[13px] leading-relaxed text-tol/55 dark:text-tod/55">
+                    <p class="mx-auto max-w-64 mt-1.5 text-md leading-relaxed text-tol/55 dark:text-tod/55">
                         {{ props.description }}
                     </p>
                 </div>

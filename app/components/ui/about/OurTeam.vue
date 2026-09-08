@@ -4,7 +4,7 @@ import Managers from './team/Managers.vue';
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 import Tab from '~/components/shared/controls/Tab.vue';
 import { useI18n } from 'vue-i18n';
-import { shallowRef } from 'vue';
+import { computed, shallowRef } from 'vue';
 import Projects from './team/Projects.vue';
 import Administration from './team/Administration.vue';
 
@@ -20,16 +20,20 @@ const tabsItems:TabContract[] = [
     {
         icon: 'bi:terminal',
         label: t('about.team.content.projects'),
-        count: 1,
+        count: 0,
         component: shallowRef(Projects),
     },
     {
         icon: 'heroicons:identification',
         label: t('about.team.content.administration'),
-        count: 3,
+        count: 0,
         component: shallowRef(Administration),
     },
 ];
+
+const items = computed(():TabContract[] => {
+    return tabsItems.filter((i:TabContract): boolean => (i.count as number) > 0);
+})
 
 </script>
 <template>
@@ -38,5 +42,5 @@ const tabsItems:TabContract[] = [
         :title="$t('about.team.header.title')"
         :span="$t('about.team.header.span')"
     />
-    <Tab :items="tabsItems" :use-transitions="true" />
+    <Tab :items="items" :use-transitions="true" />
 </template>

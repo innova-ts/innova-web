@@ -45,7 +45,7 @@ const { skills, profileURL, linkedinLink, githubLink } = useTeamMember(props.mem
                 <code class="text-sm block w-full p-3 rounded-md border dark:text-branding-200 border-branding-200/50 bg-branding-100/8 dark:bg-branding-200/5 mb-3 wrap-break-word">
                     {{ skills }}
                 </code>
-                <p class="text-sm">{{ props.memberInfo.summary }}</p>
+                <p class="text-md">{{ props.memberInfo.summary }}</p>
             </div>
             <hr class="border-gray-400/20 my-2">
             <div class="flex gap-2 justify-end">

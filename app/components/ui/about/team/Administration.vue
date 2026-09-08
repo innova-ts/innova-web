@@ -7,12 +7,11 @@ const { members } = useAdministrationMembers();
 </script>
 
 <template>
-    <TabBody class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <TabBody class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <TeamMember
             v-for="(member, index) in members"
             :key="index" 
-            :member-info="member" 
-            variant="img-first"
+            :member-info="member"
         />
     </TabBody>
 </template>

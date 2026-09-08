@@ -17,10 +17,10 @@ const icon = computed(() => {
     <section class="flex flex-col gap-2 transition-all duration-700 ease-out hover:-translate-y-1">
         <strong class="w-full flex gap-2">
             <ClientIcon :icon="icon" class="text-2xl text-main-100" />
-            <span class="text-tod/90">
+            <span class="text-tod/90 text-md">
                 {{ props.type === 'mission' ? $t('about.hero.mission') : $t('about.hero.vision') }}
             </span>
         </strong>
-        <p class="text-[13px] text-tod/78">{{ text }}</p>
+        <p class="text-md text-tod/78">{{ text }}</p>
     </section>
 </template>

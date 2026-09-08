@@ -1,6 +1,6 @@
 import { computed, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useFirstResource, useResourcesCollection } from './functionals/useDynamicContent';
+import { useResourcesCollection } from './functionals/useDynamicContent';
 
 export type TeamMemberContract = {
     name: string
