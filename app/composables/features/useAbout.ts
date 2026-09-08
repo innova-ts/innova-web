@@ -128,8 +128,3 @@ export const usePolicies = () => {
     const { getResourceCollection } = useResourcesCollection('policies-list', 'policies');
     return { getResourceCollection };
 };
-
-export const usePolicy = () => {
-    const { getResource } = useFirstResource('policy-resource', 'policies');
-    return { getResource }
-};

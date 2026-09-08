@@ -1,14 +1,15 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router';
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
-import { usePolicies, usePolicy } from '~/composables/features/useAbout';
+import { useFirstResource } from '~/composables/features/functionals/useDynamicContent';
+import { usePolicies } from '~/composables/features/useAbout';
 
 const route = useRoute();
 
 const { getResourceCollection } = usePolicies()
 const { data:policies } = await getResourceCollection();
 
-const { getResource } = usePolicy();
+const { getResource } = useFirstResource(`policy-resource-${route.params.policy}`, 'policies');
 const { data:policyResource } = await getResource(route.params.policy as string);
 
 </script>
