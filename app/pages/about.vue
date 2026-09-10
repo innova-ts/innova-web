@@ -27,10 +27,10 @@ useSeo({
 
         <!-- Metrics -->
         <div class="relative bg-bol-1 lg:py-20 dark:bg-bod-1 z-10">
-            <div 
-                class="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(-45deg,#a1a1aa0f,#a1a1aa0f_2px,transparent_2px,transparent_16px)] dark:bg-[repeating-linear-gradient(-45deg,#ffffff05,#ffffff05_2px,transparent_2px,transparent_16px)]"
+             <div
+                class="pointer-events-none absolute inset-0 z-0 bg-[repeating-linear-gradient(-45deg,#a1a1aa0f,#a1a1aa0f_2px,transparent_2px,transparent_16px)] dark:bg-[repeating-linear-gradient(-45deg,#ffffff05,#ffffff05_2px,transparent_2px,transparent_16px)]"
             />
-            <div class="container-site">
+            <div class="container-site relative z-10">
                 <Counts />
             </div>
         </div>
