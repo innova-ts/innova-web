@@ -1,0 +1,121 @@
+{
+    "about": {
+        "seo": {
+            "title": "About Us | Innova",
+            "description": "Discover more about Innova, leader in technological solutions. Learn about our history, team, and values."
+        },
+        "hero": {
+            "ourIdentity": "Our Identity",
+            "title": "Engineering with purpose",
+            "description": "Transforming businesses through technology. We turn knowledge, innovation, and technology into opportunities that allow companies to operate better, grow with confidence, and reach their full potential.",
+            "mission": "Mission",
+            "vision": "Vision",
+            "missionDesc": "Driving business transformation through valuable technological solutions.",
+            "visionDesc": "Strategic technology partner for companies seeking to grow and innovate."
+        },
+        "team": {
+            "header": {
+                "label": "Our team // human talent",
+                "title": "System architects",
+                "span": "Professional focus and leadership"
+            },
+            "labelLinks": {
+                "github": "Github Profile",
+                "linkedin": "Linkedin Profile"
+            },
+            "content": {
+                "specialization": "Specialization",
+                "linkedin": "View LinkedIn Profile",
+                "github": "View Github Profile",
+                "management":"Management",
+                "projects": "Projects",
+                "administration": "Administration"
+            },
+            "management": {
+                "title": "Management",
+                "total": "2",
+                "items": [
+                    {
+                        "name": "José L.",
+                        "position": "Project Leader",
+                        "skills": "Project management,Strategy,Team coordination,Client management",
+                        "summary": "Leads projects, coordinates teams and clients, and supervises the planning, execution, and achievement of objectives."
+                    },
+                    {
+                        "name": "Victor V.",
+                        "position": "Team Leader",
+                        "skills": "Technical leadership,Software architecture,Development,Agile methodologies",
+                        "summary": "Leads the technical team, supervises development, and ensures quality, efficiency, and compliance with technological standards."
+                    }
+                ]
+            }
+        },
+        "metrics": {
+            "projects": {
+                "name": "Success projects",
+                "description": "Deployments completed"
+            },
+            "countries": {
+                "name": "Scoped countries",
+                "description": "International presence"
+            },
+            "uptime": {
+                "name": "Guaranteed uptime",
+                "description": "High availability SLA"
+            },
+            "support": {
+                "name": "Continuous support",
+                "description": "Uninterrupted operations"
+            }
+        },
+        "values": {
+            "label": "Axiomatic protocols",
+            "title": "Our elementary values",
+            "span": "The foundations of our work",
+            "items": {
+                "innovation": {
+                    "title": "Innovation",
+                    "description": "We explore emerging technologies to create transformative solutions that anticipate the future."
+                },
+                "quality": {
+                    "title": "Quality",
+                    "description": "Rigorous engineering standards and clean code in every technical delivery."
+                },
+                "transparency": {
+                    "title": "Transparency",
+                    "description": "Honest communication, full traceability, and operational clarity in every phase."
+                },
+                "teamWork": {
+                    "title": "Teamwork",
+                    "description": "Multidisciplinary synergy driven by collaboration and shared talent."
+                },
+                "responsibility": {
+                    "title": "Responsibility",
+                    "description": "Ethical commitment and strict compliance with every project and client."
+                },
+                "compromise": {
+                    "title": "Commitment",
+                    "description": "Dedication to success, security and goals of our partners."
+                },
+                "clientsOrientation": {
+                    "title": "Client orientation",
+                    "description": "Custom solutions designed to enhance the real growth of each business."
+                },
+                "continousEnhancement": {
+                    "title": "Continuous enhancement",
+                    "description": "Constant evolution of methodologies, architectures and technical skills."
+                }
+            }
+        },
+        "policies": {
+            "header": {
+                "label": "Legal directory",
+                "title": "Operational documentation"
+            },
+            "content": {
+                "description": "Access our legal frameworks, privacy policies, and operational guidelines.",
+                "updatedAt": "Updated at: {date}"
+            }
+        }
+    }
+}

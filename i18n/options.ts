@@ -9,6 +9,7 @@ const availableTranslations = [
     'common.json',
     'navigation.json',
     'home.json',
+    'about.json',
 ]
 
 const getFiles = (locs: Array<LocalesFormat>) => {

@@ -5,9 +5,9 @@ import WebHeader from '~/components/web/default-layout/WebHeader.vue';
 <template>
     <div class="layout-container">
         <WebHeader />
-        <div class="pt-web-ss min-h-dvh w-full light:bg-bol dark:bg-bod text-tol dark:text-tod">
+        <main class="pt-web-ss min-h-dvh w-full light:bg-bol dark:bg-bod text-tol dark:text-tod">
             <slot />
-        </div>
+        </main>
         <WebFooter />
     </div>
 </template>

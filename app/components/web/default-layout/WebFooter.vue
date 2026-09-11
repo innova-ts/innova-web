@@ -26,7 +26,7 @@ const routes = reactive([
 ]);
 const InterestLinks = reactive([
     {
-        path: `policy/privacy`,
+        path: `//policies/privacy-policy`,
         label: "navigation.footer.privacyPolicy"
     },
     {
