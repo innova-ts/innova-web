@@ -1,7 +1,7 @@
 --- 
 title: "Terms and Conditions"
 description: "Rules governing the use of the innovats.dev website and the contracting of services from INNOVA Technology Services S.A.C."
-lastUpdated: "2026-09-10"
+lastUpdated: "09-10-2026"
 version: "v1.0"
 --- 
 

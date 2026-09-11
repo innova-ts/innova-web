@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 description: "What data INNOVATS collects at innovats.dev, why we use it, how we protect it, and your rights."
-lastUpdated: "2026-09-10"
+lastUpdated: "09-10-2026"
 version: "v1.0"
 ---
 

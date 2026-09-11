@@ -1,7 +1,7 @@
 --- 
 title: "Website Use Policy"
 description: "Rules for browsing and using innovats.dev correctly and securely."
-lastUpdated: "2026-09-10"
+lastUpdated: "09-10-2026"
 version: "v1.0"
 --- 
 

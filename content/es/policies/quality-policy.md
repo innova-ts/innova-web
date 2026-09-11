@@ -1,7 +1,7 @@
 ---
 title: "Política de Calidad"
 description: "Qué significa 'terminado' en INNOVATS: estándares, pruebas, aceptación y mejora continua."
-lastUpdated: "2026-09-10"
+lastUpdated: "10-09-2026"
 version: "v1.0"
 ---
 

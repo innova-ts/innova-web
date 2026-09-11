@@ -1,7 +1,7 @@
 ---
 title: "Política de Seguridad de la Información"
 description: "Cómo protege INNOVATS la confidencialidad, integridad y disponibilidad de su información."
-lastUpdated: "2026-09-10"
+lastUpdated: "10-09-2026"
 version: "v1.0"
 ---
 

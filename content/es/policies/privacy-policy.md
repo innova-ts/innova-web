@@ -1,7 +1,7 @@
 ---
 title: "Política de Privacidad"
 description: "Qué datos recopila INNOVATS en innovats.dev, para qué los usa, cómo los protege y sus derechos."
-lastUpdated: "2026-09-10"
+lastUpdated: "10-09-2026"
 version: "v1.0"
 ---
 

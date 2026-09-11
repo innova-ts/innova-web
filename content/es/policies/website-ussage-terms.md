@@ -1,7 +1,7 @@
 ---
 title: "Política de Uso del Sitio Web"
 description: "Reglas para navegar y usar innovats.dev de forma correcta y segura."
-lastUpdated: "2026-09-10"
+lastUpdated: "10-09-2026"
 version: "v1.0"
 ---
 

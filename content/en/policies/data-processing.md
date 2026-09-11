@@ -1,7 +1,7 @@
 ---
 title: "Personal Data Processing Policy"
 description: "INNOVATS' corporate commitment to data protection: principles, governance, rights, and security."
-lastUpdated: "2026-09-10"
+lastUpdated: "09-10-2026"
 version: "v1.0"
 ---
 

@@ -1,7 +1,7 @@
 --- 
 title: "Quality Policy"
 description: "What 'done' means at INNOVATS: standards, testing, acceptance, and continuous improvement."
-lastUpdated: "2026-09-10"
+lastUpdated: "09-10-2026"
 version: "v1.0"
 --- 
 

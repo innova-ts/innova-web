@@ -1,7 +1,7 @@
 --- 
 title: "Information Security Policy"
 description: "How INNOVATS protects the confidentiality, integrity, and availability of its information."
-lastUpdated: "2026-09-10"
+lastUpdated: "09-10-2026"
 version: "v1.0"
 --- 
 
