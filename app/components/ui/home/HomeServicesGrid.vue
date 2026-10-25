@@ -1,12 +1,10 @@
 <script lang="ts" setup>
 import ArticleHomeServiceGridItem from './ArticleHomeServiceGridItem.vue';
+import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 </script>
 <template>
-    <div class="mb-7">
-        <h2 class="text-3xl font-bold text-center">{{ $t('home.services.title') }}</h2>
-    </div>
-    <div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <SimpleSectionHeader :label="$t('home.services.label')" :title="$t('home.services.title')" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-8">
             <ArticleHomeServiceGridItem 
                 img-url="/images/pages/home/presentation/custom-software"
                 :alt="$t('home.services.mainServices.custom.title')"
@@ -42,5 +40,4 @@ import ArticleHomeServiceGridItem from './ArticleHomeServiceGridItem.vue';
                 class="md:col-span-2" 
             />
         </div>
-    </div>
 </template>

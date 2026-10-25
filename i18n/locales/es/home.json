@@ -5,6 +5,7 @@
             "description": "Desarrollo de software a medida por un equipo experto. Creamos aplicaciones web escalables, APIs y soluciones digitales para tu empresa."
         },
         "presentation": {
+            "label": "Ingeniería de software // Estudio de innovación",
             "title": "Transformamos ideas en",
             "subtitle": "código de alto rendimiento.",
             "description": "Ingeniería de software escalable, segura y precisa para tu negocio.",
@@ -13,6 +14,7 @@
         },
         "services": {
             "title": "Nuestros servicios",
+            "label": "Capacidades constructivas",
             "mainServices": {
                 "custom": {
                     "title": "Software a medida",
@@ -34,6 +36,7 @@
         },
         "wcu": {
             "title": "¿Por que elegirnos?",
+            "label": "Principios de ingeniería",
             "description": "Nuestro enfoque se basa en principios de ingeniería sólidos.",
             "items": {
                 "innovation": {
@@ -52,6 +55,7 @@
         },
         "clients": {
             "title": "Testimonios",
+            "label": "Respaldo de clientes",
             "quote": "La confianza de nuestros clientes se construye con resultados que hablan por sí mismos y soluciones diseñadas para cumplir sus objetivos.",
             "description": "Cada proyecto refleja nuestro compromiso, generando experiencias satisfactorias que nuestros clientes reconocen y respaldan con sus propias palabras.",
             "alt": "Logo de la empresa {name}.",

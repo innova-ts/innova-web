@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import WCUItem from './WCUItem.vue';
 import WCURow from './WCURow.vue';
+import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 </script>
 
 <template>
-    <div class="mb-7">
-        <h2 class="text-3xl font-bold">{{ $t('home.wcu.title') }}</h2>
-        <p class="text-lg dark:text-tod/70 my-4 mb-6">{{ $t('home.wcu.description') }}</p>
-    </div>
+    <SimpleSectionHeader :label="$t('home.wcu.label')" :title="$t('home.wcu.title')" />
+    <p class="text-lg text-tol/70 dark:text-tod/70 mt-5 mb-10">{{ $t('home.wcu.description') }}</p>
     <WCURow :length="3">
         <template #items>
             <WCUItem 

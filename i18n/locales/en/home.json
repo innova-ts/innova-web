@@ -5,6 +5,7 @@
             "description": "Custom software development by an expert team of developers. We build scalable web applications, APIs, and digital solutions for your business."
         },
         "presentation": {
+            "label": "Software engineering // Innovation studio",
             "title": "We turn ideas into",
             "subtitle": "high-performance code.",
             "description": "Scalable, secure and precise software engineering for your business.",
@@ -13,6 +14,7 @@
         },
         "services": {
             "title": "Our services",
+            "label": "Constructive capabilities",
             "mainServices": {
                 "custom": {
                     "title": "Custom software",
@@ -34,6 +36,7 @@
         },
         "wcu": {
             "title": "Why choose us?",
+            "label": "Engineering principles",
             "description": "Our focus is based on solid engineering principles.",
             "items": {
                 "innovation": {
@@ -52,6 +55,7 @@
         },
         "clients": {
             "title": "Testimonials",
+            "label": "Client endorsement",
             "quote": "Our clients’ trust is built on results that speak for themselves, with solutions designed to meet their goals and deliver lasting value.",
             "description": "Every project reflects our commitment to excellence, creating experiences our clients value and confidently endorse through their own words.",
             "alt": "{name} Company logo.",
