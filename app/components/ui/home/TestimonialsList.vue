@@ -2,6 +2,7 @@
 import { useRuntimeConfig } from '#app';
 import Testimonial from './Testimonial.vue';
 import SmartImg from '~/components/shared/ui/SmartImg.vue';
+import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 const config = useRuntimeConfig();
 
 const testimonialsCorps: string[] = config.public.testimonialsCorps.split(',').map((c: string) => c.trim());
@@ -13,9 +14,9 @@ const renderTestimonialLogo = (companyName: string): string => {
 </script>
 
 <template>
-    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl text-center mb-13">
-        {{ $t('home.clients.title') }}
-    </h2>
+    <div class="mb-13">
+        <SimpleSectionHeader :label="$t('home.clients.label')" :title="$t('home.clients.title')" />
+    </div>
     <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">    
         <div class="self-start lg:col-span-5 lg:sticky lg:top-24 lg:h-fit">
             <span class="h-[40px] pointer-events-none text-left block w-full text-8xl font-serif text-main-200 transition-colors duration-300 group-hover/testimonial:text-main-100/10 dark:text-zinc-700/30 dark:group-hover/testimonial:text-main-100/50 dark:group-focus/testimonial:text-main-100/20" aria-hidden="true">
