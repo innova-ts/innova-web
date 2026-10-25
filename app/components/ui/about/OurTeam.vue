@@ -4,36 +4,37 @@ import Managers from './team/Managers.vue';
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 import Tab from '~/components/shared/controls/Tab.vue';
 import { useI18n } from 'vue-i18n';
-import { computed, shallowRef } from 'vue';
+import { shallowRef } from 'vue';
 import Projects from './team/Projects.vue';
 import Administration from './team/Administration.vue';
+import { useListMembers, type TeamMemberContract } from '~/composables/features/useAbout.ts';
 
 const { t } = useI18n();
 
-const tabsItems:TabContract[] = [
+const { members, error, status } = await useListMembers<TeamMemberContract[]>();
+
+const tabItems:TabContract[] = [
     {
         icon: 'mdi:domain',
         label: t('about.team.content.management'),
-        count: 2,
         component: shallowRef(Managers),
+        props: { error, status, members: members.value.filter((m:TeamMemberContract) => m.member_role_id == 1) }
     },
     {
         icon: 'bi:terminal',
         label: t('about.team.content.projects'),
-        count: 0,
         component: shallowRef(Projects),
+        props: { error, status, members: members.value.filter((m:TeamMemberContract) => m.member_role_id == 2) }
     },
     {
         icon: 'heroicons:identification',
         label: t('about.team.content.administration'),
-        count: 0,
         component: shallowRef(Administration),
+        props: { error, status, members: members.value.filter((m:TeamMemberContract) => m.member_role_id == 3) }
     },
 ];
 
-const items = computed(():TabContract[] => {
-    return tabsItems.filter((i:TabContract): boolean => (i.count as number) > 0);
-})
+const items:TabContract[] = tabItems.filter((t) => t.props?.members.length > 0);
 
 </script>
 <template>

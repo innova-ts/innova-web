@@ -38,7 +38,7 @@ const { skills, profileURL, linkedinLink, githubLink } = useTeamMember(props.mem
         <div :class="['w-full grow flex p-5 flex-col justify-between gap-3', (variant === 'standar') && 'md:w-5/7']">
             <div>
                 <div class="flex justify-between">
-                    <h3 class="text-2xl">{{ props.memberInfo.name }}</h3>
+                    <h3 class="text-2xl">{{ props.memberInfo.name }} {{ props.memberInfo.last_name }}</h3>
                     <div class="flex gap-2 justify-end">
                         <a 
                             v-if="(linkedinLink)"

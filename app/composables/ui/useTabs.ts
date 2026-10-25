@@ -3,8 +3,8 @@ import { reactive, ref } from "vue";
 export type TabContract = {
     icon?: string,
     label: string,
-    count?: number,
-    component: any
+    component: any,
+    props?: Record<string, any>
 }
 
 export const useTabs = (tabItems: TabContract[], defaultTabIndex: number = 0) => {

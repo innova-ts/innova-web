@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import TabBody from '~/components/shared/controls/TabBody.vue';
 import TeamMember from '../TeamMember.vue';
-import { useAdministrationMembers } from '~/composables/features/useAbout.ts';
+import type { TeamMemberContract } from '~/composables/features/useAbout.ts';
 
-const { members } = useAdministrationMembers();
+const props = defineProps<{
+    error?: string;
+    status: string;
+    members: TeamMemberContract[];
+}>();
+
 </script>
 
 <template>
