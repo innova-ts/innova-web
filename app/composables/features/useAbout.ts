@@ -1,6 +1,6 @@
-import { computed, type ComputedRef } from 'vue';
+import { computed, ref, type ComputedRef } from 'vue';
 import { useResourcesCollection } from './functionals/useDynamicContent';
-import { useHttp } from '../utils/useHttp';
+import { getStates, useHttp } from '../utils/useHttp';
 
 export type TeamMemberContract = {
     name: string
@@ -15,9 +15,10 @@ export type TeamMemberContract = {
     linkedin_user_hash?:string
 }
 
-export const useListMembers = async <T>() => {
-    const { data: members, error, status } = await useHttp<T>('/members');
-    return { members:members as ComputedRef<T>, error, status }
+export const useListMembers = <T>() => {
+    const { data: members, error, status, pending } = useHttp<T>('/members');
+    const { isError, isPending } = getStates({ error, pending });
+    return { members:members as ComputedRef<T>, status, isPending, isError }
 }
 
 export const useTeamMember = (member:TeamMemberContract) => {

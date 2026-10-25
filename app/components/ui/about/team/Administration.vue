@@ -4,8 +4,8 @@ import TeamMember from '../TeamMember.vue';
 import type { TeamMemberContract } from '~/composables/features/useAbout.ts';
 
 const props = defineProps<{
-    error?: string;
-    status: string;
+    isError: boolean;
+    isPending: boolean;
     members: TeamMemberContract[];
 }>();
 

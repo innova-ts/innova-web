@@ -5,6 +5,7 @@ export type TabContract = {
     label: string,
     component: any,
     props?: Record<string, any>
+    count?: number
 }
 
 export const useTabs = (tabItems: TabContract[], defaultTabIndex: number = 0) => {

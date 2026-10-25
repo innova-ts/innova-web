@@ -4,37 +4,49 @@ import Managers from './team/Managers.vue';
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 import Tab from '~/components/shared/controls/Tab.vue';
 import { useI18n } from 'vue-i18n';
-import { shallowRef } from 'vue';
+import { computed, reactive, shallowRef } from 'vue';
 import Projects from './team/Projects.vue';
 import Administration from './team/Administration.vue';
 import { useListMembers, type TeamMemberContract } from '~/composables/features/useAbout.ts';
 
 const { t } = useI18n();
 
-const { members, error, status } = await useListMembers<TeamMemberContract[]>();
+const { members, isError, isPending } = useListMembers<TeamMemberContract[]>();
 
-const tabItems:TabContract[] = [
-    {
-        icon: 'mdi:domain',
-        label: t('about.team.content.management'),
-        component: shallowRef(Managers),
-        props: { error, status, members: members.value.filter((m:TeamMemberContract) => m.member_role_id == 1) }
-    },
-    {
-        icon: 'bi:terminal',
-        label: t('about.team.content.projects'),
-        component: shallowRef(Projects),
-        props: { error, status, members: members.value.filter((m:TeamMemberContract) => m.member_role_id == 2) }
-    },
-    {
-        icon: 'heroicons:identification',
-        label: t('about.team.content.administration'),
-        component: shallowRef(Administration),
-        props: { error, status, members: members.value.filter((m:TeamMemberContract) => m.member_role_id == 3) }
-    },
-];
+const buildListMetaData = (id: number, list: TeamMemberContract[]) => {
+    return reactive({
+        props: { 
+            isError: isError.value, 
+            isPending: isPending.value, 
+            members: list.filter((m) => m.member_role_id === id) 
+        },
+        count: list.length
+    });
+}
 
-const items:TabContract[] = tabItems.filter((t) => t.props?.members.length > 0);
+
+const tabItems = computed<TabContract[]>(() => {
+    return [
+        {
+            icon: 'mdi:domain',
+            label: t('about.team.content.management'),
+            component: shallowRef(Managers),
+            ...buildListMetaData(1, members.value || [])
+        },
+        {
+            icon: 'bi:terminal',
+            label: t('about.team.content.projects'),
+            component: shallowRef(Projects),
+            ...buildListMetaData(2, members.value || [])
+        },
+        {
+            icon: 'heroicons:identification',
+            label: t('about.team.content.administration'),
+            component: shallowRef(Administration),
+            ...buildListMetaData(3, members.value || [])
+        },
+    ] 
+});
 
 </script>
 <template>
@@ -43,5 +55,5 @@ const items:TabContract[] = tabItems.filter((t) => t.props?.members.length > 0);
         :title="$t('about.team.header.title')"
         :span="$t('about.team.header.span')"
     />
-    <Tab :items="items" :use-transitions="true" />
+    <Tab :items="tabItems" :use-transitions="true" />
 </template>

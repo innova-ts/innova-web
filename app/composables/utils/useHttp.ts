@@ -1,4 +1,4 @@
-import { createUseFetch, useRuntimeConfig } from '#imports';
+import { computed, createUseFetch, ref, useRuntimeConfig, type Ref } from '#imports';
 import type { UseFetchOptions } from '#app';
 import { useI18n } from 'vue-i18n';
 
@@ -15,8 +15,14 @@ const buildUseHttpConfig = (callerOptions: UseFetchOptions<string>, lazy: boolea
         return locale.value;
       },
       ...(callerOptions.headers || {}),      
-    }
+    },
   }
+}
+
+export const getStates = ({ error, pending }: { error: Ref<any | undefined>, pending: Ref<boolean> }) => {
+  const isPending = computed(() => pending.value && error.value === undefined);
+  const isError = computed(() => !isPending.value && error.value !== undefined);
+  return { isPending, isError }
 }
 
 export const useHttp = createUseFetch((callerOptions) => {

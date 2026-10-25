@@ -41,7 +41,7 @@ const { tabs, activateTab, isActiveTab, activeTab } = useTabs(props.items, props
                             isActiveTab(tab) && 'text-main-200!'
                         ]"
                     >{{ tab.label }}</span> 
-                    <span v-if="items?.length" class="min-w-6 min-h-6 text-center bg-zinc-400/10 rounded-md">{{ items.length }}</span>
+                    <span v-if="tab?.count" class="min-w-6 min-h-6 text-center bg-zinc-400/10 rounded-md">{{ tab.count }}</span>
                 </a>
             </li>
         </ul>
