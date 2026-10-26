@@ -54,5 +54,5 @@ const tabItems = computed<TabContract[]>(() => {
         :title="$t('about.team.header.title')"
         :span="$t('about.team.header.span')"
     />
-    <Tab :items="tabItems" :use-transitions="true" />
+    <Tab :items="tabItems" :use-transitions="false" />
 </template>
