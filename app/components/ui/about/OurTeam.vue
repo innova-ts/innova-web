@@ -35,13 +35,13 @@ const tabItems = computed<TabContract[]>(() => {
         /* {
             icon: 'bi:terminal',
             label: t('about.team.content.projects'),
-            component: markRaw(Projects),
+            component: markRaw<Component>(Projects),
             ...buildListMetaData(2, members.value || [], currentStatus)
-        },
+        }, 
         {
             icon: 'heroicons:identification',
             label: t('about.team.content.administration'),
-            component: markRaw(Administration),
+            component: markRaw<Component>(Administration),
             ...buildListMetaData(3, members.value || [], currentStatus)
         }, */
     ]/* .filter((t:TabContract) => (t.count || 0) > 0) */
