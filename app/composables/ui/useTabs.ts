@@ -1,32 +1,26 @@
-import { reactive, ref } from "vue";
+import { computed, ref, toValue, type MaybeRefOrGetter } from "vue";
 
 export type TabContract = {
     icon?: string,
     label: string,
-    count?: number,
-    component: any
+    component: any,
+    props?: Record<string, any>
+    count?: number
 }
 
-export const useTabs = (tabItems: TabContract[], defaultTabIndex: number = 0) => {
+export const useTabs = (tabItems: MaybeRefOrGetter<TabContract[]>, defaultTabIndex: number = 0) => {
 
     const currentActiveTabIndex = ref<number>(defaultTabIndex);
 
-    const tabs = reactive<TabContract[]>(tabItems);
+    const tabs = computed<TabContract[]>(() => toValue(tabItems));
 
-    const getTabIndex = (t: TabContract): number => {
-        return tabs.indexOf(t);
+    const activeTab = computed<TabContract | undefined>(() => tabs.value[currentActiveTabIndex.value]);
+
+    const activateTab = (index: number): void => {
+        currentActiveTabIndex.value = index;
     };
 
-    let activeTab = ref<TabContract>(tabs[defaultTabIndex] as TabContract)
-
-    const activateTab = (t: TabContract): void => {
-        currentActiveTabIndex.value = getTabIndex(t);
-        activeTab.value = t;
-    };
-
-    const isActiveTab = (t: TabContract): boolean => {
-        return getTabIndex(t) === currentActiveTabIndex.value;
-    }
+    const isActiveTab = (index: number): boolean => index === currentActiveTabIndex.value
 
     return {
         tabs,

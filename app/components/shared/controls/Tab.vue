@@ -11,20 +11,20 @@ const props = withDefaults(defineProps<{
     useTransitions: false
 })
 
-const { tabs, activateTab, isActiveTab, activeTab } = useTabs(props.items, props.defaultIndex);
+const { tabs, activateTab, isActiveTab, activeTab } = useTabs(() => props.items, props.defaultIndex);
 
 </script>
 <template>
     <div class="my-4">
         <ul class="flex gap-2 border-b border-b-bod/10 dark:border-b-bol/10 overflow-x-auto">
-            <li v-for="tab in tabs" :key="tab.label">
+            <li v-for="(tab, index) in tabs" :key="tab.label">
                 <a 
                     href="#" 
-                    @click.prevent="activateTab(tab)" 
+                    @click.prevent="activateTab(index)" 
                     :class="[
                         'transition-all outline-0! flex items-center gap-2 py-3 px-5 border-t-5 border-t-bod/10 dark:border-t-bol/10 rounded-t-sm',
                         'group/tab-link hover:bg-zinc-400/5 dark:hover:bg-zinc-300/5',
-                        isActiveTab(tab) && 'bg-zinc-400/10! dark:bg-zinc-300/10! border-t-main-50 dark:border-t-main-50'
+                        isActiveTab(index) && 'bg-zinc-400/10! dark:bg-zinc-300/10! border-t-main-50 dark:border-t-main-50'
                     ]"
                 >
                     <ClientIcon 
@@ -32,13 +32,13 @@ const { tabs, activateTab, isActiveTab, activeTab } = useTabs(props.items, props
                         :icon="tab.icon"
                         :class="[
                             'font-semibold',
-                            isActiveTab(tab) && 'text-main-200!'
+                            isActiveTab(index) && 'text-main-200!'
                         ]"
                     />
                     <span 
                         :class="[
                             'text-xs font-semibold uppercase',
-                            isActiveTab(tab) && 'text-main-200!'
+                            isActiveTab(index) && 'text-main-200!'
                         ]"
                     >{{ tab.label }}</span> 
                     <span v-if="tab?.count" class="min-w-6 min-h-6 text-center bg-zinc-400/10 rounded-md">{{ tab.count }}</span>
@@ -51,6 +51,7 @@ const { tabs, activateTab, isActiveTab, activeTab } = useTabs(props.items, props
             v-if="activeTab" 
             :is="activeTab?.component" 
             :key="activeTab?.label"
+            v-bind="activeTab?.props"
         />
     </Transition>
     <template v-else>
@@ -58,6 +59,7 @@ const { tabs, activateTab, isActiveTab, activeTab } = useTabs(props.items, props
             v-if="activeTab" 
             :is="activeTab?.component" 
             :key="activeTab?.label"
+            v-bind="activeTab?.props"
         />
     </template>
 </template>

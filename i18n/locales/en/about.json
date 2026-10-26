@@ -30,24 +30,6 @@
                 "management":"Management",
                 "projects": "Projects",
                 "administration": "Administration"
-            },
-            "management": {
-                "title": "Management",
-                "total": "2",
-                "items": [
-                    {
-                        "name": "José L.",
-                        "position": "Project Leader",
-                        "skills": "Project management,Strategy,Team coordination,Client management",
-                        "summary": "Leads projects, coordinates teams and clients, and supervises the planning, execution, and achievement of objectives."
-                    },
-                    {
-                        "name": "Victor V.",
-                        "position": "Team Leader",
-                        "skills": "Technical leadership,Software architecture,Development,Agile methodologies",
-                        "summary": "Leads the technical team, supervises development, and ensures quality, efficiency, and compliance with technological standards."
-                    }
-                ]
             }
         },
         "metrics": {

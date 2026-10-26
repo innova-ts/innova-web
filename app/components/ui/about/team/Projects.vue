@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import TabBody from '~/components/shared/controls/TabBody.vue';
 import TeamMember from '../TeamMember.vue';
-import { useProjectMembers } from '~/composables/features/useAbout.ts';
+import type { TeamMemberContract } from '~/composables/features/useAbout.ts';
 
-const { members } = useProjectMembers();
+const props = defineProps<{
+    isError: boolean;
+    isPending: boolean;
+    members: TeamMemberContract[];
+}>();
+
 </script>
 
 <template>

@@ -46,6 +46,7 @@ export default defineNuxtConfig({
       appName: import.meta.env.APP_NAME,
       businessEmail: import.meta.env.BUSINESS_EMAIL,
       testimonialsCorps: import.meta.env.TESTIMONIAL_CORPS,
+      apiEndpoint: import.meta.env.API_ENDPOINT,
       socialNetworks: {
         facebook: import.meta.env.FACEBOOK_LINK,
         instagram: import.meta.env.INSTAGRAM_LINK,
