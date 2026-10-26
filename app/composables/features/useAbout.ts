@@ -1,6 +1,6 @@
 import { computed, ref, type ComputedRef } from 'vue';
 import { useResourcesCollection } from './functionals/useDynamicContent';
-import { getStates, useHttp } from '../utils/useHttp';
+import { getStates, useHttp, useLazyHttp } from '../utils/useHttp';
 
 export type TeamMemberContract = {
     name: string
@@ -16,9 +16,8 @@ export type TeamMemberContract = {
 }
 
 export const useListMembers = <T>() => {
-    const { data: members, error, status, pending } = useHttp<T>('/members');
-    const { isError, isPending } = getStates({ error, pending });
-    return { members:members as ComputedRef<T>, status, isPending, isError }
+    const { data: members, status } = useLazyHttp<T>('/members');
+    return { members:members as ComputedRef<T>, status }
 }
 
 export const useTeamMember = (member:TeamMemberContract) => {

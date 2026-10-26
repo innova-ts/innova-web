@@ -4,48 +4,47 @@ import Managers from './team/Managers.vue';
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 import Tab from '~/components/shared/controls/Tab.vue';
 import { useI18n } from 'vue-i18n';
-import { computed, reactive, shallowRef } from 'vue';
-import Projects from './team/Projects.vue';
-import Administration from './team/Administration.vue';
+import { computed, markRaw, ref, type Component } from 'vue';
 import { useListMembers, type TeamMemberContract } from '~/composables/features/useAbout.ts';
+import type { RequestStatusWhiteList } from '~/composables/utils/useHttp.ts';
 
 const { t } = useI18n();
 
-const { members, isError, isPending } = useListMembers<TeamMemberContract[]>();
+const { members, status } = useListMembers<TeamMemberContract[]>();
 
-const buildListMetaData = (id: number, list: TeamMemberContract[]) => {
-    return reactive({
-        props: { 
-            isError: isError.value, 
-            isPending: isPending.value, 
-            members: list.filter((m) => m.member_role_id === id) 
+const buildListMetaData = (id: number, list: TeamMemberContract[], status: string) => {
+    const filteredMembers = list.filter((m) => m.member_role_id === id);
+    return {
+        props: {
+            status: ref<RequestStatusWhiteList>(status as RequestStatusWhiteList),
+            members: filteredMembers
         },
-        count: list.length
-    });
+        count: filteredMembers.length
+    };
 }
 
-
 const tabItems = computed<TabContract[]>(() => {
+    const currentStatus = status.value;
     return [
         {
             icon: 'mdi:domain',
             label: t('about.team.content.management'),
-            component: shallowRef(Managers),
-            ...buildListMetaData(1, members.value || [])
+            component: markRaw<Component>(Managers),
+            ...buildListMetaData(1, members.value || [], currentStatus)
         },
-        {
+        /* {
             icon: 'bi:terminal',
             label: t('about.team.content.projects'),
-            component: shallowRef(Projects),
-            ...buildListMetaData(2, members.value || [])
+            component: markRaw(Projects),
+            ...buildListMetaData(2, members.value || [], currentStatus)
         },
         {
             icon: 'heroicons:identification',
             label: t('about.team.content.administration'),
-            component: shallowRef(Administration),
-            ...buildListMetaData(3, members.value || [])
-        },
-    ] 
+            component: markRaw(Administration),
+            ...buildListMetaData(3, members.value || [], currentStatus)
+        }, */
+    ]/* .filter((t:TabContract) => (t.count || 0) > 0) */
 });
 
 </script>

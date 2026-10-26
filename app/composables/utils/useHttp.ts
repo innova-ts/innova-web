@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n';
 const buildUseHttpConfig = (callerOptions: UseFetchOptions<string>, lazy: boolean) => {
   const config = useRuntimeConfig();
   const { locale } = useI18n();
- return {
+  return {
     ...callerOptions,
     baseURL: `${config.public.apiEndpoint as string}/api`,
     lazy: lazy,
@@ -19,6 +19,9 @@ const buildUseHttpConfig = (callerOptions: UseFetchOptions<string>, lazy: boolea
   }
 }
 
+export type RequestStatusWhiteList = 'idle' | 'pending' | 'success' | 'error';
+export type RequestStatus = Ref<RequestStatusWhiteList>;
+
 export const getStates = ({ error, pending }: { error: Ref<any | undefined>, pending: Ref<boolean> }) => {
   const isPending = computed(() => pending.value && error.value === undefined);
   const isError = computed(() => !isPending.value && error.value !== undefined);
@@ -30,7 +33,20 @@ export const useHttp = createUseFetch((callerOptions) => {
 })
 
 export const useLazyHttp = createUseFetch((callerOptions) => {
-  return buildUseHttpConfig(callerOptions as any, true);
+  const config = useRuntimeConfig();
+  const { locale } = useI18n();
+  return {
+    ...callerOptions,
+    baseURL: `${config.public.apiEndpoint as string}/api`,
+    lazy: true,
+    headers: {
+      'Content-Type': 'application/json',
+      get 'Accept-Language' () {
+        return locale.value;
+      },
+      ...(callerOptions.headers || {}),      
+    },
+  }
   
 })
 
