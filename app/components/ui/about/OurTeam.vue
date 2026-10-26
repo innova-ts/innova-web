@@ -4,7 +4,7 @@ import Managers from './team/Managers.vue';
 import SimpleSectionHeader from '~/components/shared/ui/SimpleSectionHeader.vue';
 import Tab from '~/components/shared/controls/Tab.vue';
 import { useI18n } from 'vue-i18n';
-import { computed, markRaw, ref, type Component } from 'vue';
+import { computed, markRaw, reactive, ref, type Component } from 'vue';
 import { useListMembers, type TeamMemberContract } from '~/composables/features/useAbout.ts';
 import type { RequestStatusWhiteList } from '~/composables/utils/useHttp.ts';
 
@@ -23,28 +23,23 @@ const buildListMetaData = (id: number, list: TeamMemberContract[], status: strin
     };
 }
 
+const items = reactive<TabContract[]>([
+    {
+        icon: 'mdi:domain',
+        label: t('about.team.content.management'),
+        component: markRaw<Component>(Managers),
+        ...buildListMetaData(1, members.value || [], status.value)
+    },
+]);
+
 const tabItems = computed<TabContract[]>(() => {
     const currentStatus = status.value;
-    return [
-        {
-            icon: 'mdi:domain',
-            label: t('about.team.content.management'),
-            component: markRaw<Component>(Managers),
+    return items.map((_item:TabContract) => {
+        return {
+            ..._item,
             ...buildListMetaData(1, members.value || [], currentStatus)
-        },
-        /* {
-            icon: 'bi:terminal',
-            label: t('about.team.content.projects'),
-            component: markRaw<Component>(Projects),
-            ...buildListMetaData(2, members.value || [], currentStatus)
-        }, 
-        {
-            icon: 'heroicons:identification',
-            label: t('about.team.content.administration'),
-            component: markRaw<Component>(Administration),
-            ...buildListMetaData(3, members.value || [], currentStatus)
-        }, */
-    ]/* .filter((t:TabContract) => (t.count || 0) > 0) */
+        };
+    })
 });
 
 </script>
